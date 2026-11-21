@@ -5,7 +5,7 @@
 
 New video (only once it's live): download its LIVE YouTube thumbnail (https://i.ytimg.com/vi/<id>/maxresdefault.jpg;
 the host may change it after upload) to website/thumbs/vN.jpg at 640 px wide, and add an entry at the TOP of "videos".
-New Short (only once public): thumbnail https://i.ytimg.com/vi/<id>/oardefault.jpg -> website/shorts/<id>.jpg (360 px wide),
+New Short (only once public): a frame at ~1.2 s from assets/video/vN_short-K.mp4 -> website/shorts/<id>.jpg (360 px wide; YouTube oardefault frames look odd),
 add it at the TOP of "shorts". Medium articles are read automatically from the feed at build time.
 """
 import html
