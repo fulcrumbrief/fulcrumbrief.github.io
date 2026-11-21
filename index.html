@@ -8,111 +8,333 @@
 <meta name="p:domain_verify" content="ca687cbf0aa69649f3c9272c0bcaaf56"/>
 <link rel="canonical" href="https://fulcrumbrief.github.io/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Fulcrum Brief articles" href="https://medium.com/feed/@fulcrumbrief">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Fulcrum Brief">
+<meta property="og:site_name" content="Fulcrum Brief">
+<meta property="og:title" content="Fulcrum Brief | The pivot points of global power">
 <meta property="og:description" content="Every war has a pivot point: the moment the balance of power moves. Fulcrum Brief explains the wars and crises shaping the world with maps and sourced numbers, and shows what each one costs you.">
 <meta property="og:url" content="https://fulcrumbrief.github.io/">
 <meta property="og:image" content="https://fulcrumbrief.github.io/og-image.png">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@FulcrumBrief">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Fulcrum Brief", "alternateName": "@FulcrumBrief", "url": "https://fulcrumbrief.github.io", "logo": "https://fulcrumbrief.github.io/logo.png", "description": "Every war has a pivot point: the moment the balance of power moves. Fulcrum Brief explains the wars and crises shaping the world with maps and sourced numbers, and shows what each one costs you.", "slogan": "The pivot points of global power", "sameAs": ["https://www.youtube.com/@FulcrumBrief", "https://x.com/FulcrumBrief", "https://www.facebook.com/1439591135908976", "https://www.instagram.com/fulcrumbrief", "https://www.tiktok.com/@fulcrumbrief", "https://www.threads.com/@fulcrumbrief", "https://bsky.app/profile/fulcrumbrief.bsky.social", "https://medium.com/@fulcrumbrief", "https://www.pinterest.com/fulcrumbrief/", "https://flipboard.com/@fulcrumbrief", "https://www.quora.com/profile/Damyan-Ivanov-2", "https://github.com/fulcrumbrief"]}</script>
+<meta name="theme-color" content="#0B1622">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsMediaOrganization", "name": "Fulcrum Brief", "alternateName": "@FulcrumBrief", "url": "https://fulcrumbrief.github.io", "logo": "https://fulcrumbrief.github.io/logo.png", "description": "Every war has a pivot point: the moment the balance of power moves. Fulcrum Brief explains the wars and crises shaping the world with maps and sourced numbers, and shows what each one costs you.", "slogan": "The pivot points of global power", "sameAs": ["https://www.youtube.com/@FulcrumBrief", "https://x.com/FulcrumBrief", "https://www.facebook.com/1439591135908976", "https://www.instagram.com/fulcrumbrief", "https://www.tiktok.com/@fulcrumbrief", "https://www.threads.com/@fulcrumbrief", "https://bsky.app/profile/fulcrumbrief.bsky.social", "https://medium.com/@fulcrumbrief", "https://www.pinterest.com/fulcrumbrief/", "https://flipboard.com/@fulcrumbrief", "https://www.quora.com/profile/Damyan-Ivanov-2", "https://github.com/fulcrumbrief"]}</script>
 <style>
-@font-face{font-family:"Barlow Condensed";font-weight:700;src:url(fonts/BarlowCondensed-Bold.ttf)}
-@font-face{font-family:"Barlow Condensed";font-weight:600;src:url(fonts/BarlowCondensed-SemiBold.ttf)}
-@font-face{font-family:"Barlow";font-weight:400;src:url(fonts/Barlow-Regular.ttf)}
-@font-face{font-family:"Barlow";font-weight:500;src:url(fonts/Barlow-Medium.ttf)}
-:root{--navy:#0B1622;--slate:#1E3148;--amber:#F2A900;--white:#E8E6E1;--steel:#9FB0C3}
+@font-face{font-family:"Barlow Condensed";font-weight:700;font-display:swap;src:url(fonts/BarlowCondensed-Bold.ttf)}
+@font-face{font-family:"Barlow Condensed";font-weight:600;font-display:swap;src:url(fonts/BarlowCondensed-SemiBold.ttf)}
+@font-face{font-family:"Barlow";font-weight:400;font-display:swap;src:url(fonts/Barlow-Regular.ttf)}
+@font-face{font-family:"Barlow";font-weight:500;font-display:swap;src:url(fonts/Barlow-Medium.ttf)}
+:root{--navy:#0B1622;--navy2:#0F1D2C;--slate:#1E3148;--amber:#F2A900;--white:#E8E6E1;--steel:#9FB0C3}
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;background:var(--navy);color:var(--white);font:400 17px/1.6 Barlow,system-ui,sans-serif}
 a{color:inherit}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-header{text-align:center;padding:56px 0 28px;border-bottom:1px solid var(--slate)}
-header img{width:min(460px,90%);height:auto}
-.tag{font:600 22px "Barlow Condensed",sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin:14px 0 0}
-.lead{max-width:720px;margin:22px auto 0;color:var(--steel);font-size:18px}
-.cta{display:inline-block;margin-top:26px;background:var(--amber);color:var(--navy);text-decoration:none;
-  font:700 20px "Barlow Condensed",sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:12px 28px;border-radius:999px}
-h2{font:700 30px "Barlow Condensed",sans-serif;letter-spacing:.1em;text-transform:uppercase;margin:48px 0 18px}
-h2 span{color:var(--amber)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+img{max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.cond{font-family:"Barlow Condensed",sans-serif}
+nav{position:sticky;top:0;z-index:10;background:rgba(11,22,34,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--slate)}
+nav .wrap{display:flex;align-items:center;gap:22px;height:64px}
+nav .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 22px "Barlow Condensed",sans-serif;letter-spacing:.08em;text-transform:uppercase}
+nav .brand img{width:30px;height:30px}
+nav .brand b{color:var(--amber);font-weight:700}
+nav .links{display:flex;gap:20px;margin-left:auto}
+nav .links a{text-decoration:none;color:var(--steel);font:600 16px "Barlow Condensed",sans-serif;letter-spacing:.1em;text-transform:uppercase}
+nav .links a:hover{color:var(--amber)}
+.btn{display:inline-block;background:var(--amber);color:var(--navy);text-decoration:none;font:700 18px "Barlow Condensed",sans-serif;
+  letter-spacing:.08em;text-transform:uppercase;padding:11px 24px;border-radius:999px;white-space:nowrap}
+.btn.ghost{background:transparent;color:var(--white);border:1px solid var(--steel)}
+.btn:hover{filter:brightness(1.08)}
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--slate);
+  background:radial-gradient(1200px 500px at 85% -10%,rgba(242,169,0,.13),transparent 60%),
+  repeating-linear-gradient(0deg,transparent 0 59px,rgba(30,49,72,.45) 59px 60px),
+  repeating-linear-gradient(90deg,transparent 0 59px,rgba(30,49,72,.45) 59px 60px),var(--navy)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center;padding-top:64px;padding-bottom:64px}
+.pillbadge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(242,169,0,.5);color:var(--amber);border-radius:999px;
+  padding:5px 14px;font:600 14px "Barlow Condensed",sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.pillbadge:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--amber)}
+.hero h1{font:700 clamp(44px,6vw,72px)/1.02 "Barlow Condensed",sans-serif;letter-spacing:.01em;text-transform:uppercase;margin:18px 0 14px}
+.hero h1 span{color:var(--amber)}
+.hero p.lead{color:var(--steel);font-size:19px;max-width:520px;margin:0 0 26px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.feature{display:block;text-decoration:none;background:var(--slate);border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.45);transition:transform .2s}
+.feature:hover{transform:translateY(-4px)}
+.feature .meta{padding:16px 20px 20px}
+.feature h2{margin:4px 0 0;font:700 26px/1.15 "Barlow Condensed",sans-serif}
+.thumb{position:relative}
+.thumb img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.play{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:rgba(11,22,34,.75);border:2px solid var(--amber)}
+.play:after{content:"";position:absolute;left:25px;top:19px;border-left:20px solid var(--amber);border-top:13px solid transparent;border-bottom:13px solid transparent}
+.kicker{display:block;color:var(--amber);font:600 14px "Barlow Condensed",sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--slate);background:var(--navy2)}
+.stats div{padding:22px 10px;text-align:center;border-right:1px solid var(--slate)}
+.stats div:last-child{border-right:0}
+.stats b{display:block;font:700 34px "Barlow Condensed",sans-serif;color:var(--white)}
+.stats span{color:var(--steel);font:600 14px "Barlow Condensed",sans-serif;letter-spacing:.12em;text-transform:uppercase}
+section{padding:56px 0 8px}
+.sechead{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:22px}
+h2.sec{font:700 34px "Barlow Condensed",sans-serif;letter-spacing:.08em;text-transform:uppercase;margin:0}
+h2.sec span{color:var(--amber)}
+.sechead a{color:var(--steel);text-decoration:none;font:600 16px "Barlow Condensed",sans-serif;letter-spacing:.1em;text-transform:uppercase}
+.sechead a:hover{color:var(--amber)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
 .card{display:block;background:var(--slate);border-radius:14px;overflow:hidden;text-decoration:none;transition:transform .15s}
-.card:hover{transform:translateY(-3px);outline:2px solid var(--amber)}
-.card img{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover}
-.card .date{display:block;padding:12px 16px 0;color:var(--amber);font:600 14px "Barlow Condensed",sans-serif;letter-spacing:.12em;text-transform:uppercase}
-.card h3{margin:4px 16px 6px;font:700 22px/1.2 "Barlow Condensed",sans-serif}
-.card p{margin:0 16px 18px;color:var(--steel);font-size:15px}
+.card:hover,.article:hover,.topic:hover,.num:hover{transform:translateY(-3px);outline:2px solid var(--amber)}
+.card .kicker{padding:14px 18px 0}
+.card h3{margin:4px 18px 6px;font:700 23px/1.18 "Barlow Condensed",sans-serif}
+.card p{margin:0 18px 20px;color:var(--steel);font-size:15px}
+.articles{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:22px}
+.article{display:flex;flex-direction:column;text-decoration:none;background:linear-gradient(180deg,var(--slate),var(--navy2));border-left:4px solid var(--amber);
+  border-radius:10px;padding:22px 24px;transition:transform .15s}
+.article h3{font:700 26px/1.15 "Barlow Condensed",sans-serif;margin:6px 0 10px}
+.article p{color:var(--steel);font-size:16px;margin:0 0 16px;flex:1}
+.article .more{color:var(--amber);font:600 16px "Barlow Condensed",sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.shorts{display:grid;grid-auto-flow:column;grid-auto-columns:200px;gap:16px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x mandatory}
+.short{scroll-snap-align:start;text-decoration:none;background:var(--slate);border-radius:14px;overflow:hidden}
+.short img{display:block;width:100%;aspect-ratio:9/16;object-fit:cover}
+.short span{display:block;padding:10px 12px 14px;font:600 17px/1.2 "Barlow Condensed",sans-serif}
+.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.num{display:block;text-decoration:none;border-radius:12px;overflow:hidden;background:#fff;transition:transform .15s}
+.num img{display:block;width:100%;height:auto}
+.num span{display:block;background:var(--slate);color:var(--steel);padding:10px 14px;font-size:14px}
+.topics{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.topic{display:grid;grid-template-columns:1fr 1fr;align-items:center;text-decoration:none;background:var(--slate);border-radius:14px;overflow:hidden;transition:transform .15s}
+.topic img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:16/10}
+.topic div{padding:18px 20px}
+.topic h3{font:700 24px "Barlow Condensed",sans-serif;margin:0 0 6px;text-transform:uppercase;letter-spacing:.04em}
+.topic p{margin:0;color:var(--steel);font-size:15px}
+.method{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.method div{background:var(--navy2);border:1px solid var(--slate);border-radius:14px;padding:24px}
+.method h3{font:700 24px "Barlow Condensed",sans-serif;margin:8px 0;text-transform:uppercase;letter-spacing:.04em}
+.method p{color:var(--steel);margin:0;font-size:16px}
+.method .n{font:700 44px "Barlow Condensed",sans-serif;color:var(--amber);line-height:1}
+.quote{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center;margin-top:26px;background:var(--slate);border-radius:16px;overflow:hidden}
+.quote img{display:block;width:100%;height:auto}
+.quote div{padding:24px 28px 24px 0}
+.quote blockquote{margin:0 0 10px;font:600 26px/1.25 "Barlow Condensed",sans-serif}
+.quote cite{color:var(--steel);font-style:normal;font-size:15px}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:end;background:radial-gradient(500px 300px at 20% 80%,rgba(242,169,0,.16),transparent 70%),var(--navy2);
+  border:1px solid var(--slate);border-radius:18px;padding:30px 30px 0;overflow:hidden}
+.about img{display:block;width:100%;max-width:380px;height:auto;margin:0 auto}
+.about .txt{padding-bottom:30px}
+.about p{color:var(--steel)}
 .pills{display:flex;flex-wrap:wrap;gap:12px}
 .pill{text-decoration:none;border:1px solid var(--steel);border-radius:999px;padding:9px 18px;font:500 16px Barlow,sans-serif}
 .pill:hover{border-color:var(--amber);color:var(--amber)}
-.about p{max-width:760px;color:var(--steel)}
-footer{margin-top:56px;padding:26px 0 40px;border-top:1px solid var(--slate);color:var(--steel);font-size:14px;text-align:center}
+.subscribe{text-align:center;margin:64px 0 0;padding:48px 20px;border-top:1px solid var(--slate);border-bottom:1px solid var(--slate);
+  background:radial-gradient(700px 260px at 50% 0,rgba(242,169,0,.14),transparent 70%)}
+.subscribe h2{font:700 clamp(32px,4vw,46px) "Barlow Condensed",sans-serif;text-transform:uppercase;margin:0 0 8px}
+.subscribe p{color:var(--steel);margin:0 0 22px}
+footer{padding:28px 0 44px;color:var(--steel);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.muted{color:var(--steel)}
+@media (max-width:860px){
+  nav .links{display:none} nav .btn{margin-left:auto}
+  .hero .wrap,.quote,.about,.topic{grid-template-columns:1fr}
+  .quote div{padding:0 22px 22px}
+  .stats{grid-template-columns:repeat(2,1fr)} .stats div:nth-child(2){border-right:0}
+  .nums,.method,.topics{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <img src="logo.png" alt="Fulcrum Brief" width="1500" height="500">
-    <p class="tag">The pivot points of global power</p>
+<nav><div class="wrap">
+  <a class="brand" href="#top"><img src="favicon.svg" alt="">Fulcrum <b>Brief</b></a>
+  <div class="links"><a href="#briefings">Briefings</a><a href="#articles">Articles</a><a href="#shorts">Shorts</a><a href="#topics">Topics</a><a href="#about">About</a></div>
+  <a class="btn" href="https://www.youtube.com/@FulcrumBrief?sub_confirmation=1" target="_blank" rel="noopener">Subscribe</a>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <div>
+    <span class="pillbadge">Every claim checked</span>
+    <h1>Every war has a <span>pivot point.</span></h1>
     <p class="lead">Every war has a pivot point: the moment the balance of power moves. Fulcrum Brief explains the wars and crises shaping the world with maps and sourced numbers, and shows what each one costs you.</p>
-    <a class="cta" href="https://www.youtube.com/@FulcrumBrief?sub_confirmation=1" target="_blank" rel="noopener">Watch on YouTube</a>
+    <div class="ctas">
+      <a class="btn" href="https://www.youtube.com/watch?v=R-xiFPGLiQs" target="_blank" rel="noopener">Watch the latest</a>
+      <a class="btn ghost" href="#articles">Read the articles</a>
+    </div>
   </div>
-</header>
+  <a class="feature" href="https://www.youtube.com/watch?v=R-xiFPGLiQs" target="_blank" rel="noopener">
+    <div class="thumb"><img src="thumbs/v5.jpg?v=1795282563" alt="Ukraine Is Setting Russia&#x27;s War Money on Fire" width="640" height="360"><span class="play"></span></div>
+    <div class="meta"><span class="kicker">Latest briefing · Nov 2026</span><h2>Ukraine Is Setting Russia&#x27;s War Money on Fire</h2></div>
+  </a>
+</div></header>
+
+<div class="stats">
+  <div><b>5</b><span>Full briefings</span></div>
+  <div><b>6+</b><span>Shorts</span></div>
+  <div><b>2</b><span>Articles</span></div>
+  <div><b>Mon · Wed · Fri</b><span>New videos</span></div>
+</div>
+
 <main class="wrap">
-  <h2>Latest <span>briefings</span></h2>
-  <div class="grid">
-      <a class="card" href="https://www.youtube.com/watch?v=R-xiFPGLiQs" target="_blank" rel="noopener">
-        <img src="thumbs/v5.jpg?v=1795282563" alt="Ukraine Is Setting Russia&#x27;s War Money on Fire" loading="lazy" width="640" height="360">
-        <span class="date">Nov 2026</span>
-        <h3>Ukraine Is Setting Russia&#x27;s War Money on Fire</h3>
-        <p>Nine refineries in one week, rationing at the pump, a deficit near double the plan. Why it still isn&#x27;t a collapse.</p>
-      </a>
+  <section id="briefings">
+    <div class="sechead"><h2 class="sec">More <span>briefings</span></h2><a href="https://www.youtube.com/@FulcrumBrief/videos" target="_blank" rel="noopener">All videos →</a></div>
+    <div class="grid">
       <a class="card" href="https://www.youtube.com/watch?v=4Yg1JGsH5Xo" target="_blank" rel="noopener">
-        <img src="thumbs/v4.jpg?v=1795282564" alt="The First 72 Hours of a Russia-NATO War" loading="lazy" width="640" height="360">
-        <span class="date">Nov 2026</span>
+        <div class="thumb"><img src="thumbs/v4.jpg?v=1795282564" alt="The First 72 Hours of a Russia-NATO War" loading="lazy" width="640" height="360"><span class="play"></span></div>
+        <span class="kicker">Nov 2026</span>
         <h3>The First 72 Hours of a Russia-NATO War</h3>
         <p>What the published war games show about the first three days, and why the weak spot is time, not tanks.</p>
       </a>
       <a class="card" href="https://www.youtube.com/watch?v=DyT1vXEYxPk" target="_blank" rel="noopener">
-        <img src="thumbs/v3.jpg?v=1795282564" alt="Trump Is Flying to China With No US Carrier Left Near Taiwan" loading="lazy" width="640" height="360">
-        <span class="date">Nov 2026</span>
+        <div class="thumb"><img src="thumbs/v3.jpg?v=1795282564" alt="Trump Is Flying to China With No US Carrier Left Near Taiwan" loading="lazy" width="640" height="360"><span class="play"></span></div>
+        <span class="kicker">Nov 2026</span>
         <h3>Trump Is Flying to China With No US Carrier Left Near Taiwan</h3>
         <p>Eleven carriers, none near China. What Beijing learns from a stretched US Navy.</p>
       </a>
       <a class="card" href="https://www.youtube.com/watch?v=zOFSzSw9s6g" target="_blank" rel="noopener">
-        <img src="thumbs/v2.jpg?v=1795282565" alt="Trump Just Lost Congress… What Comes Next With Iran" loading="lazy" width="640" height="360">
-        <span class="date">Nov 2026</span>
+        <div class="thumb"><img src="thumbs/v2.jpg?v=1795282565" alt="Trump Just Lost Congress… What Comes Next With Iran" loading="lazy" width="640" height="360"><span class="play"></span></div>
+        <span class="kicker">Nov 2026</span>
         <h3>Trump Just Lost Congress… What Comes Next With Iran</h3>
         <p>The strikes approved and called off, the January window, and what a divided Congress means for oil.</p>
       </a>
       <a class="card" href="https://www.youtube.com/watch?v=pSGrvRmc7LI" target="_blank" rel="noopener">
-        <img src="thumbs/v1.jpg?v=1795282566" alt="What Happens if Russia Gets Its Own Starlink Over Ukraine" loading="lazy" width="640" height="360">
-        <span class="date">Nov 2026</span>
+        <div class="thumb"><img src="thumbs/v1.jpg?v=1795282566" alt="What Happens if Russia Gets Its Own Starlink Over Ukraine" loading="lazy" width="640" height="360"><span class="play"></span></div>
+        <span class="kicker">Nov 2026</span>
         <h3>What Happens if Russia Gets Its Own Starlink Over Ukraine</h3>
         <p>Satellite internet changed the war. What happens if Moscow gets its own network over the front line.</p>
       </a>
-  </div>
-  <h2>Follow <span>Fulcrum Brief</span></h2>
-  <div class="pills">
-      <a class="pill" href="https://www.youtube.com/@FulcrumBrief" target="_blank" rel="noopener me">YouTube</a>
-      <a class="pill" href="https://x.com/FulcrumBrief" target="_blank" rel="noopener me">X</a>
-      <a class="pill" href="https://www.facebook.com/1439591135908976" target="_blank" rel="noopener me">Facebook</a>
-      <a class="pill" href="https://www.instagram.com/fulcrumbrief" target="_blank" rel="noopener me">Instagram</a>
-      <a class="pill" href="https://www.tiktok.com/@fulcrumbrief" target="_blank" rel="noopener me">TikTok</a>
-      <a class="pill" href="https://www.threads.com/@fulcrumbrief" target="_blank" rel="noopener me">Threads</a>
-      <a class="pill" href="https://bsky.app/profile/fulcrumbrief.bsky.social" target="_blank" rel="noopener me">Bluesky</a>
-      <a class="pill" href="https://medium.com/@fulcrumbrief" target="_blank" rel="noopener me">Medium</a>
-      <a class="pill" href="https://www.pinterest.com/fulcrumbrief/" target="_blank" rel="noopener me">Pinterest</a>
-      <a class="pill" href="https://flipboard.com/@fulcrumbrief" target="_blank" rel="noopener me">Flipboard</a>
-      <a class="pill" href="https://www.quora.com/profile/Damyan-Ivanov-2" target="_blank" rel="noopener me">Quora</a>
-      <a class="pill" href="https://github.com/fulcrumbrief" target="_blank" rel="noopener me">GitHub</a>
-  </div>
-  <section class="about">
-    <h2>About</h2>
-    <p>Fulcrum Brief covers Ukraine and Russia, Iran and the Middle East, Israel, the Red Sea, China and Taiwan, and oil and energy. Every claim is checked and every source is named on screen and in the description.</p><p>Each video finds the pivot point of a story, the moment the balance shifted, and ends on what it means for everyday life: prices at the pump, groceries, markets, security.</p><p>Based in the Black Sea region, close to NATO&#x27;s eastern flank. New full videos every Monday, Wednesday and Friday.</p>
+    </div>
   </section>
+
+  <section id="articles">
+    <div class="sechead"><h2 class="sec">Latest <span>articles</span></h2><a href="https://medium.com/@fulcrumbrief" target="_blank" rel="noopener">All articles →</a></div>
+    <div class="articles">
+      <a class="article" href="https://medium.com/@fulcrumbrief/the-first-72-hours-of-a-russia-nato-war-what-the-war-games-show-68318420f409" target="_blank" rel="noopener">
+        <span class="kicker">Article · Nov 21, 2026</span>
+        <h3>The First 72 Hours of a Russia-NATO War: What the War Games Show</h3>
+        <p>What if Russian troops crossed into a NATO country, and Washington had 72 hours to decide whether to fight? This isn&#x27;t a prediction. It&#x27;s a scenario built from war games that armies and think tanks have actually run. In one,…</p>
+        <span class="more">Read on Medium →</span>
+      </a>
+      <a class="article" href="https://medium.com/@fulcrumbrief/ukraine-is-setting-russias-war-money-on-fire-98c1c20a5495" target="_blank" rel="noopener">
+        <span class="kicker">Article · Nov 21, 2026</span>
+        <h3>Ukraine Is Setting Russia&#x27;s War Money on Fire</h3>
+        <p>Could Russia lose this war without losing a battle? In a single week this fall, drones disrupted nine of Russia&#x27;s 35 big refineries. Russia is rationing gasoline at home, its budget hole is running at nearly double the plan,…</p>
+        <span class="more">Read on Medium →</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="shorts">
+    <div class="sechead"><h2 class="sec">In <span>60 seconds</span></h2><a href="https://www.youtube.com/@FulcrumBrief/shorts" target="_blank" rel="noopener">All Shorts →</a></div>
+    <div class="shorts">
+      <a class="short" href="https://www.youtube.com/shorts/uRenhnpFBwE" target="_blank" rel="noopener">
+        <img src="shorts/uRenhnpFBwE.jpg?v=1795283382" alt="Putin on War With Europe: &quot;We Are Ready Right Now&quot;" loading="lazy" width="360" height="640">
+        <span>Putin on War With Europe: &quot;We Are Ready Right Now&quot;</span>
+      </a>
+      <a class="short" href="https://www.youtube.com/shorts/PFFR41S_eNQ" target="_blank" rel="noopener">
+        <img src="shorts/PFFR41S_eNQ.jpg?v=1795283383" alt="What a War in Europe Cost Americans Last Time" loading="lazy" width="360" height="640">
+        <span>What a War in Europe Cost Americans Last Time</span>
+      </a>
+      <a class="short" href="https://www.youtube.com/shorts/ThKT9u84jcQ" target="_blank" rel="noopener">
+        <img src="shorts/ThKT9u84jcQ.jpg?v=1795283384" alt="In This War Game, Russia Beat NATO in 3 Days" loading="lazy" width="360" height="640">
+        <span>In This War Game, Russia Beat NATO in 3 Days</span>
+      </a>
+      <a class="short" href="https://www.youtube.com/shorts/Tz5d087FoS8" target="_blank" rel="noopener">
+        <img src="shorts/Tz5d087FoS8.jpg?v=1795283384" alt="Russia&#x27;s War Plan for NATO Doesn&#x27;t Start With Tanks" loading="lazy" width="360" height="640">
+        <span>Russia&#x27;s War Plan for NATO Doesn&#x27;t Start With Tanks</span>
+      </a>
+      <a class="short" href="https://www.youtube.com/shorts/5qQvTTCrcaI" target="_blank" rel="noopener">
+        <img src="shorts/5qQvTTCrcaI.jpg?v=1795283385" alt="The Real Danger for Taiwan Isn&#x27;t an Attack" loading="lazy" width="360" height="640">
+        <span>The Real Danger for Taiwan Isn&#x27;t an Attack</span>
+      </a>
+      <a class="short" href="https://www.youtube.com/shorts/rJGjeJCQQj8" target="_blank" rel="noopener">
+        <img src="shorts/rJGjeJCQQj8.jpg?v=1795283387" alt="China Is Practicing to Keep the US Navy Out" loading="lazy" width="360" height="640">
+        <span>China Is Practicing to Keep the US Navy Out</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="numbers">
+    <div class="sechead"><h2 class="sec">What it <span>costs you</span></h2></div>
+    <div class="nums">
+      <a class="num" href="https://www.youtube.com/watch?v=4Yg1JGsH5Xo" target="_blank" rel="noopener">
+        <img src="img/num-gas.jpg" alt="What the last war in Europe did to US gas (AAA)" loading="lazy" width="960" height="540">
+        <span>What the last war in Europe did to US gas (AAA)</span>
+      </a>
+      <a class="num" href="https://www.youtube.com/watch?v=R-xiFPGLiQs" target="_blank" rel="noopener">
+        <img src="img/num-diesel.jpg" alt="Record US diesel, September 2026 (Reuters)" loading="lazy" width="960" height="540">
+        <span>Record US diesel, September 2026 (Reuters)</span>
+      </a>
+      <a class="num" href="https://www.youtube.com/watch?v=R-xiFPGLiQs" target="_blank" rel="noopener">
+        <img src="img/num-refineries.jpg" alt="Russian refineries disrupted in one week (Reuters)" loading="lazy" width="960" height="540">
+        <span>Russian refineries disrupted in one week (Reuters)</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="topics">
+    <div class="sechead"><h2 class="sec">What we <span>cover</span></h2></div>
+    <div class="topics">
+      <a class="topic" href="https://www.pinterest.com/fulcrumbrief/ukraine-russia/" target="_blank" rel="noopener">
+        <img src="img/topic-russia.jpg" alt="Ukraine &amp; Russia map" loading="lazy" width="960" height="540">
+        <div><h3>Ukraine &amp; Russia</h3><p>The front, the refinery war, NATO&#x27;s eastern flank and what Moscow actually says.</p></div>
+      </a>
+      <a class="topic" href="https://www.pinterest.com/fulcrumbrief/middle-east-iran/" target="_blank" rel="noopener">
+        <img src="img/topic-mideast.jpg" alt="Middle East &amp; Iran map" loading="lazy" width="960" height="540">
+        <div><h3>Middle East &amp; Iran</h3><p>Iran, Israel, Hormuz and the Red Sea: where the carriers are and why it matters.</p></div>
+      </a>
+      <a class="topic" href="https://www.pinterest.com/fulcrumbrief/china-taiwan/" target="_blank" rel="noopener">
+        <img src="img/topic-china.jpg" alt="China &amp; Taiwan map" loading="lazy" width="960" height="540">
+        <div><h3>China &amp; Taiwan</h3><p>Beijing&#x27;s drills, the US Navy&#x27;s reach and the lessons China is learning.</p></div>
+      </a>
+      <a class="topic" href="https://www.pinterest.com/fulcrumbrief/oil-energy-prices/" target="_blank" rel="noopener">
+        <img src="img/topic-oil.jpg" alt="Oil, energy &amp; prices map" loading="lazy" width="960" height="540">
+        <div><h3>Oil, energy &amp; prices</h3><p>How a drone strike far away shows up at your pump, in groceries and in markets.</p></div>
+      </a>
+    </div>
+  </section>
+
+  <section id="method">
+    <div class="sechead"><h2 class="sec">How we <span>work</span></h2></div>
+    <div class="method">
+      <div><span class="n">01</span><h3>Every claim checked</h3><p>Numbers come from named sources, shown on screen and listed in every description. Claims are labelled as claims.</p></div>
+      <div><span class="n">02</span><h3>In Moscow's words</h3><p>When Russian sources matter, we show the original, read it, translate it word for word, then check it against the record.</p></div>
+      <div><span class="n">03</span><h3>What it costs you</h3><p>Every story ends on everyday life: the pump, groceries, markets, security. Why a war far away reaches your house.</p></div>
+    </div>
+    <div class="quote">
+      <img src="img/quote-putin.jpg" alt="In Moscow's words: Putin quote card" loading="lazy" width="960" height="540">
+      <div><span class="kicker">In Moscow's words</span>
+        <blockquote>"We are not going to fight Europe… But if Europe suddenly wants to fight and starts, we are ready right now."</blockquote>
+        <cite>Vladimir Putin to reporters, 2 December 2025. Translated word for word, then checked against Danish military intelligence.</cite></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="about">
+      <img src="img/host.webp" alt="The host of Fulcrum Brief" loading="lazy" width="557" height="600">
+      <div class="txt">
+        <span class="kicker">About</span>
+        <h2 class="sec" style="margin:6px 0 10px">Analysis from the <span>eastern flank</span></h2>
+        <p>Fulcrum Brief covers Ukraine and Russia, Iran and the Middle East, Israel, the Red Sea, China and Taiwan, and oil and energy. Every claim is checked and every source is named on screen and in the description.</p><p>Each video finds the pivot point of a story, the moment the balance shifted, and ends on what it means for everyday life: prices at the pump, groceries, markets, security.</p><p>Based in the Black Sea region, close to NATO&#x27;s eastern flank. New full videos every Monday, Wednesday and Friday.</p>
+        <div class="pills" style="margin-top:18px">
+        <a class="pill" href="https://www.youtube.com/@FulcrumBrief" target="_blank" rel="noopener me">YouTube</a>
+        <a class="pill" href="https://x.com/FulcrumBrief" target="_blank" rel="noopener me">X</a>
+        <a class="pill" href="https://www.facebook.com/1439591135908976" target="_blank" rel="noopener me">Facebook</a>
+        <a class="pill" href="https://www.instagram.com/fulcrumbrief" target="_blank" rel="noopener me">Instagram</a>
+        <a class="pill" href="https://www.tiktok.com/@fulcrumbrief" target="_blank" rel="noopener me">TikTok</a>
+        <a class="pill" href="https://www.threads.com/@fulcrumbrief" target="_blank" rel="noopener me">Threads</a>
+        <a class="pill" href="https://bsky.app/profile/fulcrumbrief.bsky.social" target="_blank" rel="noopener me">Bluesky</a>
+        <a class="pill" href="https://medium.com/@fulcrumbrief" target="_blank" rel="noopener me">Medium</a>
+        <a class="pill" href="https://www.pinterest.com/fulcrumbrief/" target="_blank" rel="noopener me">Pinterest</a>
+        <a class="pill" href="https://flipboard.com/@fulcrumbrief" target="_blank" rel="noopener me">Flipboard</a>
+        <a class="pill" href="https://www.quora.com/profile/Damyan-Ivanov-2" target="_blank" rel="noopener me">Quora</a>
+        <a class="pill" href="https://github.com/fulcrumbrief" target="_blank" rel="noopener me">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="subscribe">
+    <h2>Find the pivot point first</h2>
+    <p>New full briefings every Monday, Wednesday and Friday.</p>
+    <a class="btn" href="https://www.youtube.com/@FulcrumBrief?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube</a>
+  </div>
 </main>
-<footer>
-  <div class="wrap">Fulcrum Brief &middot; New full videos every Monday, Wednesday and Friday &middot; <a href="https://www.youtube.com/@FulcrumBrief">youtube.com/@FulcrumBrief</a></div>
-</footer>
+
+<footer><div class="wrap">
+  <span>© 2026 Fulcrum Brief · The pivot points of global power</span>
+  <span><a href="https://www.youtube.com/@FulcrumBrief">YouTube</a> · <a href="https://medium.com/@fulcrumbrief">Medium</a> · <a href="https://x.com/FulcrumBrief">X</a> · <a href="https://www.instagram.com/fulcrumbrief">Instagram</a></span>
+</div></footer>
 </body>
 </html>

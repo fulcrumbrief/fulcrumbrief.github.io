@@ -94,5 +94,75 @@
    "name": "GitHub",
    "url": "https://github.com/fulcrumbrief"
   }
- ]
+ ],
+ "shorts": [
+  {
+   "id": "uRenhnpFBwE",
+   "title": "Putin on War With Europe: \"We Are Ready Right Now\""
+  },
+  {
+   "id": "PFFR41S_eNQ",
+   "title": "What a War in Europe Cost Americans Last Time"
+  },
+  {
+   "id": "ThKT9u84jcQ",
+   "title": "In This War Game, Russia Beat NATO in 3 Days"
+  },
+  {
+   "id": "Tz5d087FoS8",
+   "title": "Russia's War Plan for NATO Doesn't Start With Tanks"
+  },
+  {
+   "id": "5qQvTTCrcaI",
+   "title": "The Real Danger for Taiwan Isn't an Attack"
+  },
+  {
+   "id": "rJGjeJCQQj8",
+   "title": "China Is Practicing to Keep the US Navy Out"
+  }
+ ],
+ "topics": [
+  {
+   "name": "Ukraine & Russia",
+   "img": "topic-russia.jpg",
+   "text": "The front, the refinery war, NATO's eastern flank and what Moscow actually says.",
+   "url": "https://www.pinterest.com/fulcrumbrief/ukraine-russia/"
+  },
+  {
+   "name": "Middle East & Iran",
+   "img": "topic-mideast.jpg",
+   "text": "Iran, Israel, Hormuz and the Red Sea: where the carriers are and why it matters.",
+   "url": "https://www.pinterest.com/fulcrumbrief/middle-east-iran/"
+  },
+  {
+   "name": "China & Taiwan",
+   "img": "topic-china.jpg",
+   "text": "Beijing's drills, the US Navy's reach and the lessons China is learning.",
+   "url": "https://www.pinterest.com/fulcrumbrief/china-taiwan/"
+  },
+  {
+   "name": "Oil, energy & prices",
+   "img": "topic-oil.jpg",
+   "text": "How a drone strike far away shows up at your pump, in groceries and in markets.",
+   "url": "https://www.pinterest.com/fulcrumbrief/oil-energy-prices/"
+  }
+ ],
+ "numbers": [
+  {
+   "img": "num-gas.jpg",
+   "caption": "What the last war in Europe did to US gas (AAA)",
+   "video": "4Yg1JGsH5Xo"
+  },
+  {
+   "img": "num-diesel.jpg",
+   "caption": "Record US diesel, September 2026 (Reuters)",
+   "video": "R-xiFPGLiQs"
+  },
+  {
+   "img": "num-refineries.jpg",
+   "caption": "Russian refineries disrupted in one week (Reuters)",
+   "video": "R-xiFPGLiQs"
+  }
+ ],
+ "medium_feed": "https://medium.com/feed/@fulcrumbrief"
 }
