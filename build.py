@@ -317,7 +317,7 @@ footer .wrap{{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap
 
   <section id="about">
     <div class="about">
-      <img src="img/host.webp" alt="The host of Fulcrum Brief" loading="lazy" width="557" height="600">
+      <img src="img/host.webp?v={ver('img/host.webp')}" alt="The host of Fulcrum Brief" loading="lazy">
       <div class="txt">
         <span class="kicker">About</span>
         <h2 class="sec" style="margin:6px 0 10px">Analysis from the <span>eastern flank</span></h2>
