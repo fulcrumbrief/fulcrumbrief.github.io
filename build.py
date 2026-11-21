@@ -65,7 +65,7 @@ org = {
 yt = "https://www.youtube.com/watch?v="
 
 video_cards = "\n".join(f'''      <a class="card" href="{yt}{v["id"]}" target="_blank" rel="noopener">
-        <div class="thumb"><img src="thumbs/{v["thumb"]}?v={ver("thumbs/" + v["thumb"])}" alt="{e(v["title"])}" loading="lazy" width="640" height="360"><span class="play"></span></div>
+        <div class="thumb"><img src="thumbs/{v["thumb"]}?v={ver("thumbs/" + v["thumb"])}" alt="{e(v["title"])}" width="640" height="360"><span class="play"></span></div>
         <span class="kicker">{e(v["date"])}</span>
         <h3>{e(v["title"])}</h3>
         <p>{e(v["blurb"])}</p>
