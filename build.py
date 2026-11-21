@@ -3,7 +3,7 @@
   python website/build.py            # writes website/index.html
   python website/build.py --publish  # build, commit and push (GitHub Pages serves it within ~1 min)
 
-Add a new video: put its thumbnail in website/thumbs/vN.jpg (640 px wide) and add an entry at the TOP of
+Add a new video: download its LIVE YouTube thumbnail (https://i.ytimg.com/vi/<id>/maxresdefault.jpg, the host may change it after upload) to website/thumbs/vN.jpg at 640 px wide and add an entry at the TOP of
 "videos" in site.json (only once the video is live). Never add a video that isn't public yet.
 """
 import html
@@ -30,7 +30,7 @@ org = {
 
 cards = "\n".join(
     f'''      <a class="card" href="https://www.youtube.com/watch?v={v["id"]}" target="_blank" rel="noopener">
-        <img src="thumbs/{v["thumb"]}" alt="{e(v["title"])}" loading="lazy" width="640" height="360">
+        <img src="thumbs/{v["thumb"]}?v={int(os.path.getmtime(os.path.join(HERE, "thumbs", v["thumb"])))}" alt="{e(v["title"])}" loading="lazy" width="640" height="360">
         <span class="date">{e(v["date"])}</span>
         <h3>{e(v["title"])}</h3>
         <p>{e(v["blurb"])}</p>
