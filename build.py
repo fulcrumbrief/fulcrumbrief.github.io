@@ -61,6 +61,8 @@ org = {
     "@context": "https://schema.org", "@type": "NewsMediaOrganization", "name": "Fulcrum Brief",
     "alternateName": "@FulcrumBrief", "url": S["url"], "logo": S["url"] + "/logo.png",
     "description": S["description"], "slogan": S["tagline"], "sameAs": [p["url"] for p in S["profiles"]],
+    "email": S["contact"]["email"],
+    "contactPoint": {"@type": "ContactPoint", "contactType": "editorial and business inquiries", "email": S["contact"]["email"]},
 }
 yt = "https://www.youtube.com/watch?v="
 
@@ -218,6 +220,10 @@ h2.sec span{{color:var(--amber)}}
 .about img{{display:block;width:100%;max-width:380px;height:auto;margin:0 auto}}
 .about .txt{{padding-bottom:30px}}
 .about p{{color:var(--steel)}}
+.contact{{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start;background:var(--navy2);border:1px solid rgba(159,176,195,.15);border-radius:14px;padding:34px}}
+.contact p{{color:var(--steel);max-width:46ch}}
+.contact .btn{{display:inline-block;margin-top:8px;word-break:break-all}}
+footer span a{{white-space:nowrap}}
 .pills{{display:flex;flex-wrap:wrap;gap:12px}}
 .pill{{text-decoration:none;border:1px solid var(--steel);border-radius:999px;padding:9px 18px;font:500 16px Barlow,sans-serif}}
 .pill:hover{{border-color:var(--amber);color:var(--amber)}}
@@ -230,7 +236,7 @@ footer .wrap{{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap
 .muted{{color:var(--steel)}}
 @media (max-width:860px){{
   nav .links{{display:none}} nav .btn{{margin-left:auto}}
-  .hero .wrap,.quote,.about,.topic{{grid-template-columns:1fr}}
+  .hero .wrap,.quote,.about,.topic,.contact{{grid-template-columns:1fr}}
   .quote div{{padding:0 22px 22px}}
   .stats{{grid-template-columns:repeat(2,1fr)}} .stats div:nth-child(2){{border-right:0}}
   .nums,.method,.topics{{grid-template-columns:1fr}}
@@ -240,7 +246,7 @@ footer .wrap{{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap
 <body>
 <nav><div class="wrap">
   <a class="brand" href="#top"><img src="favicon.svg" alt="">Fulcrum <b>Brief</b></a>
-  <div class="links"><a href="#briefings">Briefings</a><a href="#articles">Articles</a><a href="#shorts">Shorts</a><a href="#topics">Topics</a><a href="#about">About</a></div>
+  <div class="links"><a href="#briefings">Briefings</a><a href="#articles">Articles</a><a href="#shorts">Shorts</a><a href="#topics">Topics</a><a href="#about">About</a><a href="#contact">Contact</a></div>
   <a class="btn" href="https://www.youtube.com/@FulcrumBrief?sub_confirmation=1" target="_blank" rel="noopener">Subscribe</a>
 </div></nav>
 
@@ -332,6 +338,23 @@ footer .wrap{{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap
     </div>
   </section>
 
+  <section id="contact">
+    <div class="contact">
+      <div>
+        <span class="kicker">Contact</span>
+        <h2 class="sec" style="margin:6px 0 10px">Get in <span>touch</span></h2>
+        <p>{e(S["contact"]["text"])}</p>
+        <a class="btn" href="mailto:{S["contact"]["email"]}">{S["contact"]["email"]}</a>
+      </div>
+      <div>
+        <span class="kicker">Find Fulcrum Brief on</span>
+        <div class="pills" style="margin-top:12px">
+{links}
+        </div>
+      </div>
+    </div>
+  </section>
+
   <div class="subscribe">
     <h2>Find the pivot point first</h2>
     <p>New full briefings every Monday, Wednesday and Friday.</p>
@@ -341,7 +364,7 @@ footer .wrap{{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap
 
 <footer><div class="wrap">
   <span>© 2026 Fulcrum Brief · The pivot points of global power</span>
-  <span><a href="https://www.youtube.com/@FulcrumBrief">YouTube</a> · <a href="https://medium.com/@fulcrumbrief">Medium</a> · <a href="https://x.com/FulcrumBrief">X</a> · <a href="https://www.instagram.com/fulcrumbrief">Instagram</a></span>
+  <span>{" · ".join(f'<a href="{p["url"]}" target="_blank" rel="noopener">{e(p["name"])}</a>' for p in S["profiles"])} · <a href="mailto:{S["contact"]["email"]}">Contact</a></span>
 </div></footer>
 </body>
 </html>

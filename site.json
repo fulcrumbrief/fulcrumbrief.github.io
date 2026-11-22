@@ -172,5 +172,9 @@
    "video": "R-xiFPGLiQs"
   }
  ],
- "medium_feed": "https://medium.com/feed/@fulcrumbrief"
+ "medium_feed": "https://medium.com/feed/@fulcrumbrief",
+ "contact": {
+  "email": "contacttripointmedia@gmail.com",
+  "text": "Story tip, correction, press or partnership? Write to us. Spot an error and we'll correct it in public."
+ }
 }

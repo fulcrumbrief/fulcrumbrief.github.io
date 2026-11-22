@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@FulcrumBrief">
 <meta name="theme-color" content="#0B1622">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsMediaOrganization", "name": "Fulcrum Brief", "alternateName": "@FulcrumBrief", "url": "https://fulcrumbrief.github.io", "logo": "https://fulcrumbrief.github.io/logo.png", "description": "Every war has a pivot point: the moment the balance of power moves. Fulcrum Brief explains the wars and crises shaping the world with maps and sourced numbers, and shows what each one costs you.", "slogan": "The pivot points of global power", "sameAs": ["https://www.youtube.com/@FulcrumBrief", "https://x.com/FulcrumBrief", "https://www.facebook.com/1439591135908976", "https://www.instagram.com/fulcrumbrief", "https://www.tiktok.com/@fulcrumbrief", "https://www.threads.com/@fulcrumbrief", "https://bsky.app/profile/fulcrumbrief.bsky.social", "https://medium.com/@fulcrumbrief", "https://www.pinterest.com/fulcrumbrief/", "https://flipboard.com/@fulcrumbrief", "https://www.quora.com/profile/Damyan-Ivanov-2", "https://github.com/fulcrumbrief"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsMediaOrganization", "name": "Fulcrum Brief", "alternateName": "@FulcrumBrief", "url": "https://fulcrumbrief.github.io", "logo": "https://fulcrumbrief.github.io/logo.png", "description": "Every war has a pivot point: the moment the balance of power moves. Fulcrum Brief explains the wars and crises shaping the world with maps and sourced numbers, and shows what each one costs you.", "slogan": "The pivot points of global power", "sameAs": ["https://www.youtube.com/@FulcrumBrief", "https://x.com/FulcrumBrief", "https://www.facebook.com/1439591135908976", "https://www.instagram.com/fulcrumbrief", "https://www.tiktok.com/@fulcrumbrief", "https://www.threads.com/@fulcrumbrief", "https://bsky.app/profile/fulcrumbrief.bsky.social", "https://medium.com/@fulcrumbrief", "https://www.pinterest.com/fulcrumbrief/", "https://flipboard.com/@fulcrumbrief", "https://www.quora.com/profile/Damyan-Ivanov-2", "https://github.com/fulcrumbrief"], "email": "contacttripointmedia@gmail.com", "contactPoint": {"@type": "ContactPoint", "contactType": "editorial and business inquiries", "email": "contacttripointmedia@gmail.com"}}</script>
 <style>
 @font-face{font-family:"Barlow Condensed";font-weight:700;font-display:swap;src:url(fonts/BarlowCondensed-Bold.ttf)}
 @font-face{font-family:"Barlow Condensed";font-weight:600;font-display:swap;src:url(fonts/BarlowCondensed-SemiBold.ttf)}
@@ -120,6 +120,10 @@ h2.sec span{color:var(--amber)}
 .about img{display:block;width:100%;max-width:380px;height:auto;margin:0 auto}
 .about .txt{padding-bottom:30px}
 .about p{color:var(--steel)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start;background:var(--navy2);border:1px solid rgba(159,176,195,.15);border-radius:14px;padding:34px}
+.contact p{color:var(--steel);max-width:46ch}
+.contact .btn{display:inline-block;margin-top:8px;word-break:break-all}
+footer span a{white-space:nowrap}
 .pills{display:flex;flex-wrap:wrap;gap:12px}
 .pill{text-decoration:none;border:1px solid var(--steel);border-radius:999px;padding:9px 18px;font:500 16px Barlow,sans-serif}
 .pill:hover{border-color:var(--amber);color:var(--amber)}
@@ -132,7 +136,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .muted{color:var(--steel)}
 @media (max-width:860px){
   nav .links{display:none} nav .btn{margin-left:auto}
-  .hero .wrap,.quote,.about,.topic{grid-template-columns:1fr}
+  .hero .wrap,.quote,.about,.topic,.contact{grid-template-columns:1fr}
   .quote div{padding:0 22px 22px}
   .stats{grid-template-columns:repeat(2,1fr)} .stats div:nth-child(2){border-right:0}
   .nums,.method,.topics{grid-template-columns:1fr}
@@ -142,7 +146,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 <body>
 <nav><div class="wrap">
   <a class="brand" href="#top"><img src="favicon.svg" alt="">Fulcrum <b>Brief</b></a>
-  <div class="links"><a href="#briefings">Briefings</a><a href="#articles">Articles</a><a href="#shorts">Shorts</a><a href="#topics">Topics</a><a href="#about">About</a></div>
+  <div class="links"><a href="#briefings">Briefings</a><a href="#articles">Articles</a><a href="#shorts">Shorts</a><a href="#topics">Topics</a><a href="#about">About</a><a href="#contact">Contact</a></div>
   <a class="btn" href="https://www.youtube.com/@FulcrumBrief?sub_confirmation=1" target="_blank" rel="noopener">Subscribe</a>
 </div></nav>
 
@@ -336,6 +340,34 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     </div>
   </section>
 
+  <section id="contact">
+    <div class="contact">
+      <div>
+        <span class="kicker">Contact</span>
+        <h2 class="sec" style="margin:6px 0 10px">Get in <span>touch</span></h2>
+        <p>Story tip, correction, press or partnership? Write to us. Spot an error and we&#x27;ll correct it in public.</p>
+        <a class="btn" href="mailto:contacttripointmedia@gmail.com">contacttripointmedia@gmail.com</a>
+      </div>
+      <div>
+        <span class="kicker">Find Fulcrum Brief on</span>
+        <div class="pills" style="margin-top:12px">
+        <a class="pill" href="https://www.youtube.com/@FulcrumBrief" target="_blank" rel="noopener me">YouTube</a>
+        <a class="pill" href="https://x.com/FulcrumBrief" target="_blank" rel="noopener me">X</a>
+        <a class="pill" href="https://www.facebook.com/1439591135908976" target="_blank" rel="noopener me">Facebook</a>
+        <a class="pill" href="https://www.instagram.com/fulcrumbrief" target="_blank" rel="noopener me">Instagram</a>
+        <a class="pill" href="https://www.tiktok.com/@fulcrumbrief" target="_blank" rel="noopener me">TikTok</a>
+        <a class="pill" href="https://www.threads.com/@fulcrumbrief" target="_blank" rel="noopener me">Threads</a>
+        <a class="pill" href="https://bsky.app/profile/fulcrumbrief.bsky.social" target="_blank" rel="noopener me">Bluesky</a>
+        <a class="pill" href="https://medium.com/@fulcrumbrief" target="_blank" rel="noopener me">Medium</a>
+        <a class="pill" href="https://www.pinterest.com/fulcrumbrief/" target="_blank" rel="noopener me">Pinterest</a>
+        <a class="pill" href="https://flipboard.com/@fulcrumbrief" target="_blank" rel="noopener me">Flipboard</a>
+        <a class="pill" href="https://www.quora.com/profile/Damyan-Ivanov-2" target="_blank" rel="noopener me">Quora</a>
+        <a class="pill" href="https://github.com/fulcrumbrief" target="_blank" rel="noopener me">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <div class="subscribe">
     <h2>Find the pivot point first</h2>
     <p>New full briefings every Monday, Wednesday and Friday.</p>
@@ -345,7 +377,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
 <footer><div class="wrap">
   <span>© 2026 Fulcrum Brief · The pivot points of global power</span>
-  <span><a href="https://www.youtube.com/@FulcrumBrief">YouTube</a> · <a href="https://medium.com/@fulcrumbrief">Medium</a> · <a href="https://x.com/FulcrumBrief">X</a> · <a href="https://www.instagram.com/fulcrumbrief">Instagram</a></span>
+  <span><a href="https://www.youtube.com/@FulcrumBrief" target="_blank" rel="noopener">YouTube</a> · <a href="https://x.com/FulcrumBrief" target="_blank" rel="noopener">X</a> · <a href="https://www.facebook.com/1439591135908976" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/fulcrumbrief" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.tiktok.com/@fulcrumbrief" target="_blank" rel="noopener">TikTok</a> · <a href="https://www.threads.com/@fulcrumbrief" target="_blank" rel="noopener">Threads</a> · <a href="https://bsky.app/profile/fulcrumbrief.bsky.social" target="_blank" rel="noopener">Bluesky</a> · <a href="https://medium.com/@fulcrumbrief" target="_blank" rel="noopener">Medium</a> · <a href="https://www.pinterest.com/fulcrumbrief/" target="_blank" rel="noopener">Pinterest</a> · <a href="https://flipboard.com/@fulcrumbrief" target="_blank" rel="noopener">Flipboard</a> · <a href="https://www.quora.com/profile/Damyan-Ivanov-2" target="_blank" rel="noopener">Quora</a> · <a href="https://github.com/fulcrumbrief" target="_blank" rel="noopener">GitHub</a> · <a href="mailto:contacttripointmedia@gmail.com">Contact</a></span>
 </div></footer>
 </body>
 </html>
