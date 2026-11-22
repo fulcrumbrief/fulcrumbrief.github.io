@@ -112,7 +112,10 @@ page = f'''<!doctype html>
 <meta property="og:title" content="Fulcrum Brief | {e(S["tagline"])}">
 <meta property="og:description" content="{e(S["description"])}">
 <meta property="og:url" content="{S["url"]}/">
-<meta property="og:image" content="{S["url"]}/og-image.png">
+<meta property="og:image" content="{S["url"]}/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="{S["url"]}/og-cover.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@FulcrumBrief">
 <meta name="theme-color" content="#0B1622">
