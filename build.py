@@ -331,9 +331,6 @@ footer .wrap{{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap
         <span class="kicker">About</span>
         <h2 class="sec" style="margin:6px 0 10px">Analysis from the <span>eastern flank</span></h2>
         {"".join(f"<p>{e(p)}</p>" for p in S["about"])}
-        <div class="pills" style="margin-top:18px">
-{links}
-        </div>
       </div>
     </div>
   </section>
