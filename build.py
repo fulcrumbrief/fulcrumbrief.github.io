@@ -7,6 +7,7 @@ New video (only once it's live): download its LIVE YouTube thumbnail (https://i.
 the host may change it after upload) to website/thumbs/vN.jpg at 640 px wide, and add an entry at the TOP of "videos".
 New Short (only once public): a frame at ~1.2 s from assets/video/vN_short-K.mp4 -> website/shorts/<id>.jpg (360 px wide; YouTube oardefault frames look odd),
 add it at the TOP of "shorts". Medium articles are read automatically from the feed at build time.
+The stats strip (briefings, Shorts) counts the PUBLIC videos on the channel at build time via the YouTube Data API (read-only).
 """
 import html
 import json
@@ -54,6 +55,47 @@ def articles():
 
 
 ARTS = articles()
+
+
+def channel_counts():
+    """Public long videos and Shorts on the channel, read-only via the YouTube Data API (D:/Claude pipeline, never edited).
+    Cached in stats-cache.json; falls back to the cache, then to site.json, if the API can't be reached."""
+    cache = os.path.join(HERE, "stats-cache.json")
+    try:
+        sys.path.insert(0, "D:/Claude/Fulcrum-Brief/pipeline")
+        import yt_api  # noqa: E402
+        svc = yt_api.service()
+        up = svc.channels().list(part="contentDetails", mine=True).execute()["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
+        ids, tok = [], None
+        while True:
+            r = svc.playlistItems().list(part="contentDetails", playlistId=up, maxResults=50, pageToken=tok).execute()
+            ids += [i["contentDetails"]["videoId"] for i in r["items"]]
+            tok = r.get("nextPageToken")
+            if not tok:
+                break
+        longs = shorts = 0
+        for k in range(0, len(ids), 50):
+            for v in svc.videos().list(part="status,contentDetails", id=",".join(ids[k:k + 50])).execute()["items"]:
+                if v["status"]["privacyStatus"] != "public":
+                    continue
+                m = re.match(r"P(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?)?", v["contentDetails"]["duration"])
+                secs = int(m.group(1) or 0) * 3600 + int(m.group(2) or 0) * 60 + int(m.group(3) or 0)
+                if secs <= 180:
+                    shorts += 1
+                else:
+                    longs += 1
+        c = {"videos": longs, "shorts": shorts}
+        json.dump(c, open(cache, "w"))
+        return c
+    except Exception as ex:  # offline or no API access
+        print("channel counts from cache:", ex)
+        try:
+            return json.load(open(cache))
+        except OSError:
+            return {"videos": len(S["videos"]), "shorts": len(S["shorts"])}
+
+
+CNT = channel_counts()
 V = S["videos"]
 lead = V[0]
 
@@ -267,8 +309,8 @@ footer .wrap{{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap
 </div></header>
 
 <div class="stats">
-  <div><b>{len(V)}</b><span>Full briefings</span></div>
-  <div><b>{len(S["shorts"])}+</b><span>Shorts</span></div>
+  <div><b>{max(CNT["videos"], len(V))}</b><span>Full briefings</span></div>
+  <div><b>{max(CNT["shorts"], len(S["shorts"]))}</b><span>Shorts</span></div>
   <div><b>{len(ARTS)}</b><span>Articles</span></div>
   <div><b>Mon · Wed · Fri</b><span>New videos</span></div>
 </div>
