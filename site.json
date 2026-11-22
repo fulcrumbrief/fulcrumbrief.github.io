@@ -6,7 +6,7 @@
  "about": [
   "Fulcrum Brief covers the wars and conflicts shaping the world, wherever they flare up, and what they mean for your money and your life. Every claim is checked and every source is named on screen and in the description.",
   "Each video finds the pivot point of a story, the moment the balance shifted, and ends on what it means for everyday life: prices at the pump, groceries, markets, security.",
-  "Based in the Black Sea region, close to NATO's eastern flank. New full videos every Monday, Wednesday and Friday."
+  "New full videos every Monday, Wednesday and Friday."
  ],
  "videos": [
   {
@@ -14,35 +14,40 @@
    "thumb": "v5.jpg",
    "date": "Nov 2026",
    "title": "Ukraine Is Setting Russia's War Money on Fire",
-   "blurb": "Nine refineries in one week, rationing at the pump, a deficit near double the plan. Why it still isn't a collapse."
+   "blurb": "Nine refineries in one week, rationing at the pump, a deficit near double the plan. Why it still isn't a collapse.",
+   "code": "05_2026-11-20_russia-oil-war"
   },
   {
    "id": "4Yg1JGsH5Xo",
    "thumb": "v4.jpg",
    "date": "Nov 2026",
    "title": "The First 72 Hours of a Russia-NATO War",
-   "blurb": "What the published war games show about the first three days, and why the weak spot is time, not tanks."
+   "blurb": "What the published war games show about the first three days, and why the weak spot is time, not tanks.",
+   "code": "04_2026-11-18_russia-nato-war"
   },
   {
    "id": "DyT1vXEYxPk",
    "thumb": "v3.jpg",
    "date": "Nov 2026",
    "title": "Trump Is Flying to China With No US Carrier Left Near Taiwan",
-   "blurb": "Eleven carriers, none near China. What Beijing learns from a stretched US Navy."
+   "blurb": "Eleven carriers, none near China. What Beijing learns from a stretched US Navy.",
+   "code": "03_2026-11-17_trump-china-carriers"
   },
   {
    "id": "zOFSzSw9s6g",
    "thumb": "v2.jpg",
    "date": "Nov 2026",
    "title": "Trump Just Lost Congress… What Comes Next With Iran",
-   "blurb": "The strikes approved and called off, the January window, and what a divided Congress means for oil."
+   "blurb": "The strikes approved and called off, the January window, and what a divided Congress means for oil.",
+   "code": "02_2026-11-10_trump-iran-decision"
   },
   {
    "id": "pSGrvRmc7LI",
    "thumb": "v1.jpg",
    "date": "Nov 2026",
    "title": "What Happens if Russia Gets Its Own Starlink Over Ukraine",
-   "blurb": "Satellite internet changed the war. What happens if Moscow gets its own network over the front line."
+   "blurb": "Satellite internet changed the war. What happens if Moscow gets its own network over the front line.",
+   "code": "01_2026-11-08_ukraine-space-war"
   }
  ],
  "profiles": [
@@ -184,5 +189,73 @@
  "contact": {
   "email": "contacttripointmedia@gmail.com",
   "text": "Story tip, correction, press or partnership? Write to us. Spot an error and we'll correct it in public."
+ },
+ "host": {
+  "name": "Damyan Ivanov",
+  "bio": [
+   "Fulcrum Brief is presented by Damyan Ivanov. He lives in Bulgaria, in the Black Sea region on NATO's eastern flank, across the sea from the war in Ukraine and beside the shipping lanes and energy routes it keeps hitting.",
+   "Each briefing follows the same discipline: find the pivot point, show every source on screen, label claims as claims, and end on what it means for the people watching."
+  ],
+  "sameAs": [
+   "https://www.quora.com/profile/Damyan-Ivanov-2"
+  ]
+ },
+ "standards": {
+  "intro": "Fulcrum Brief covers wars, conflicts and what they cost people far from the front. Our credibility is the product, so these are the rules every briefing follows.",
+  "sections": [
+   {
+    "h": "Sources",
+    "p": [
+     "Every fact in a briefing comes from a named source: established news outlets, official statements and data, international bodies and think tanks. The outlet and date are shown on screen, listed in the video description and published with links on each briefing page.",
+     "A fact goes in when it is backed by a primary source (an official document, statement or dataset) or by two credible outlets. When only one outlet reports something, we say so."
+    ]
+   },
+   {
+    "h": "Claims are labelled as claims",
+    "p": [
+     "Governments and armies at war make claims that cannot be checked right away. We attribute them (\"Kyiv says\", \"Moscow claims\", \"the Pentagon says\") and never present them as established fact. Figures that cannot be tied to a date and a source stay out."
+    ]
+   },
+   {
+    "h": "Quotes and posts, word for word",
+    "p": [
+     "Quotes and social media posts are shown exactly as published, with the real account or outlet and the date. We do not shorten a quote in a way that changes its meaning, and a paraphrase is shown without quote marks."
+    ]
+   },
+   {
+    "h": "In Moscow's words",
+    "p": [
+     "When a Russian-language source matters to the story, we show the original, read it, give a word-for-word translation, and then check it against the record."
+    ]
+   },
+   {
+    "h": "Numbers",
+    "p": [
+     "Prices are in US dollars unless stated, oil prices name the benchmark (Brent or WTI), and distances are in miles with kilometres in brackets. Every number carries its date, and snapshots say \"as of\" with the month."
+    ]
+   },
+   {
+    "h": "Maps and footage",
+    "p": [
+     "Our maps are built in house on public map data (Natural Earth), dated, and sourced wherever a line is contested. Footage and photos are public domain or openly licensed (for example US Department of Defense/DVIDS, Wikimedia Commons, Pixabay) and credited in each description.",
+     "We do not show casualties, graphic combat or people being harmed."
+    ]
+   },
+   {
+    "h": "Independence and money",
+    "p": [
+     "Fulcrum Brief is independent and not affiliated with any government, party or company. We have no sponsors at the moment; if that changes, sponsorships will be disclosed clearly in the video and the description.",
+     "Coverage of markets, savings and prices is news and analysis, never personal investment advice."
+    ]
+   },
+   {
+    "h": "Voice",
+    "p": [
+     "We write as analysts, not partisans: we name the actor (Washington, Moscow, Kyiv, Beijing, NATO), give each side's stated position in its own words, and keep our verdicts separate from the facts."
+    ]
+   }
+  ],
+  "corrections_policy": "If we get a fact wrong, we fix it in public. Write to us with the video, the timestamp and what is wrong. A confirmed error is corrected in the video description and on the briefing page, and logged below with the date and what changed. Corrections are never made silently.",
+  "corrections": []
  }
 }

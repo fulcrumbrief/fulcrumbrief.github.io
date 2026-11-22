@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@FulcrumBrief">
 <meta name="theme-color" content="#0B1622">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsMediaOrganization", "name": "Fulcrum Brief", "alternateName": "@FulcrumBrief", "url": "https://fulcrumbrief.github.io", "logo": "https://fulcrumbrief.github.io/logo.png", "description": "Every war has a pivot point: the moment the balance of power moves. Fulcrum Brief explains the wars and crises shaping the world with maps and sourced numbers, and shows what each one costs you.", "slogan": "The pivot points of global power", "sameAs": ["https://www.youtube.com/@FulcrumBrief", "https://x.com/FulcrumBrief", "https://www.facebook.com/1439591135908976", "https://www.instagram.com/fulcrumbrief", "https://www.tiktok.com/@fulcrumbrief", "https://www.threads.com/@fulcrumbrief", "https://bsky.app/profile/fulcrumbrief.bsky.social", "https://medium.com/@fulcrumbrief", "https://www.pinterest.com/fulcrumbrief/", "https://flipboard.com/@fulcrumbrief", "https://www.quora.com/profile/Damyan-Ivanov-2", "https://github.com/fulcrumbrief"], "email": "contacttripointmedia@gmail.com", "contactPoint": {"@type": "ContactPoint", "contactType": "editorial and business inquiries", "email": "contacttripointmedia@gmail.com"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsMediaOrganization", "@id": "https://fulcrumbrief.github.io/#org", "name": "Fulcrum Brief", "alternateName": "@FulcrumBrief", "url": "https://fulcrumbrief.github.io", "logo": "https://fulcrumbrief.github.io/logo.png", "description": "Every war has a pivot point: the moment the balance of power moves. Fulcrum Brief explains the wars and crises shaping the world with maps and sourced numbers, and shows what each one costs you.", "slogan": "The pivot points of global power", "sameAs": ["https://www.youtube.com/@FulcrumBrief", "https://x.com/FulcrumBrief", "https://www.facebook.com/1439591135908976", "https://www.instagram.com/fulcrumbrief", "https://www.tiktok.com/@fulcrumbrief", "https://www.threads.com/@fulcrumbrief", "https://bsky.app/profile/fulcrumbrief.bsky.social", "https://medium.com/@fulcrumbrief", "https://www.pinterest.com/fulcrumbrief/", "https://flipboard.com/@fulcrumbrief", "https://www.quora.com/profile/Damyan-Ivanov-2", "https://github.com/fulcrumbrief"], "email": "contacttripointmedia@gmail.com", "contactPoint": {"@type": "ContactPoint", "contactType": "editorial and business inquiries", "email": "contacttripointmedia@gmail.com"}, "correctionsPolicy": "https://fulcrumbrief.github.io/standards/#corrections", "verificationFactCheckingPolicy": "https://fulcrumbrief.github.io/standards/", "ethicsPolicy": "https://fulcrumbrief.github.io/standards/", "employee": {"@type": "Person", "@id": "https://fulcrumbrief.github.io/#host", "name": "Damyan Ivanov", "jobTitle": "Host", "sameAs": ["https://www.quora.com/profile/Damyan-Ivanov-2"]}}</script>
 <style>
 @font-face{font-family:"Barlow Condensed";font-weight:700;font-display:swap;src:url(fonts/BarlowCondensed-Bold.ttf)}
 @font-face{font-family:"Barlow Condensed";font-weight:600;font-display:swap;src:url(fonts/BarlowCondensed-SemiBold.ttf)}
@@ -120,6 +120,8 @@ h2.sec span{color:var(--amber)}
 .about img{display:block;width:100%;max-width:380px;height:auto;margin:0 auto}
 .about .txt{padding-bottom:30px}
 .about p{color:var(--steel)}
+.hostname{font:700 26px "Barlow Condensed",sans-serif;margin:20px 0 4px;text-transform:uppercase;letter-spacing:.04em}
+.hostname span{color:var(--amber);font-size:16px;letter-spacing:.14em;margin-left:8px}
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start;background:var(--navy2);border:1px solid rgba(159,176,195,.15);border-radius:14px;padding:34px}
 .contact p{color:var(--steel);max-width:46ch}
 .contact .btn{display:inline-block;margin-top:8px;word-break:break-all}
@@ -146,7 +148,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 <body>
 <nav><div class="wrap">
   <a class="brand" href="#top"><img src="favicon.svg" alt="">Fulcrum <b>Brief</b></a>
-  <div class="links"><a href="#briefings">Briefings</a><a href="#articles">Articles</a><a href="#shorts">Shorts</a><a href="#topics">Topics</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+  <div class="links"><a href="#briefings">Briefings</a><a href="#articles">Articles</a><a href="#shorts">Shorts</a><a href="#topics">Topics</a><a href="/standards/">Standards</a><a href="#about">About</a><a href="#contact">Contact</a></div>
   <a class="btn" href="https://www.youtube.com/@FulcrumBrief?sub_confirmation=1" target="_blank" rel="noopener">Subscribe</a>
 </div></nav>
 
@@ -157,7 +159,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     <p class="lead">Every war has a pivot point: the moment the balance of power moves. Fulcrum Brief explains the wars and crises shaping the world with maps and sourced numbers, and shows what each one costs you.</p>
     <div class="ctas">
       <a class="btn" href="https://www.youtube.com/watch?v=R-xiFPGLiQs" target="_blank" rel="noopener">Watch the latest</a>
-      <a class="btn ghost" href="#articles">Read the articles</a>
+      <a class="btn ghost" href="/briefing/russia-oil-war/">Sources &amp; transcript</a>
     </div>
   </div>
   <a class="feature" href="https://www.youtube.com/watch?v=R-xiFPGLiQs" target="_blank" rel="noopener">
@@ -177,27 +179,27 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   <section id="briefings">
     <div class="sechead"><h2 class="sec">More <span>briefings</span></h2><a href="https://www.youtube.com/@FulcrumBrief/videos" target="_blank" rel="noopener">All videos →</a></div>
     <div class="grid">
-      <a class="card" href="https://www.youtube.com/watch?v=4Yg1JGsH5Xo" target="_blank" rel="noopener">
+      <a class="card" href="/briefing/russia-nato-war/">
         <div class="thumb"><img src="thumbs/v4.jpg?v=1795282564" alt="The First 72 Hours of a Russia-NATO War" width="640" height="360"><span class="play"></span></div>
-        <span class="kicker">Nov 2026</span>
+        <span class="kicker">Nov 2026 · Sources &amp; transcript</span>
         <h3>The First 72 Hours of a Russia-NATO War</h3>
         <p>What the published war games show about the first three days, and why the weak spot is time, not tanks.</p>
       </a>
-      <a class="card" href="https://www.youtube.com/watch?v=DyT1vXEYxPk" target="_blank" rel="noopener">
+      <a class="card" href="/briefing/trump-china-carriers/">
         <div class="thumb"><img src="thumbs/v3.jpg?v=1795282564" alt="Trump Is Flying to China With No US Carrier Left Near Taiwan" width="640" height="360"><span class="play"></span></div>
-        <span class="kicker">Nov 2026</span>
+        <span class="kicker">Nov 2026 · Sources &amp; transcript</span>
         <h3>Trump Is Flying to China With No US Carrier Left Near Taiwan</h3>
         <p>Eleven carriers, none near China. What Beijing learns from a stretched US Navy.</p>
       </a>
-      <a class="card" href="https://www.youtube.com/watch?v=zOFSzSw9s6g" target="_blank" rel="noopener">
+      <a class="card" href="/briefing/trump-iran-decision/">
         <div class="thumb"><img src="thumbs/v2.jpg?v=1795282565" alt="Trump Just Lost Congress… What Comes Next With Iran" width="640" height="360"><span class="play"></span></div>
-        <span class="kicker">Nov 2026</span>
+        <span class="kicker">Nov 2026 · Sources &amp; transcript</span>
         <h3>Trump Just Lost Congress… What Comes Next With Iran</h3>
         <p>The strikes approved and called off, the January window, and what a divided Congress means for oil.</p>
       </a>
-      <a class="card" href="https://www.youtube.com/watch?v=pSGrvRmc7LI" target="_blank" rel="noopener">
+      <a class="card" href="/briefing/ukraine-space-war/">
         <div class="thumb"><img src="thumbs/v1.jpg?v=1795282566" alt="What Happens if Russia Gets Its Own Starlink Over Ukraine" width="640" height="360"><span class="play"></span></div>
-        <span class="kicker">Nov 2026</span>
+        <span class="kicker">Nov 2026 · Sources &amp; transcript</span>
         <h3>What Happens if Russia Gets Its Own Starlink Over Ukraine</h3>
         <p>Satellite internet changed the war. What happens if Moscow gets its own network over the front line.</p>
       </a>
@@ -321,15 +323,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
         <blockquote>"We are not going to fight Europe… But if Europe suddenly wants to fight and starts, we are ready right now."</blockquote>
         <cite>Vladimir Putin to reporters, 2 December 2025. Translated word for word, then checked against Danish military intelligence.</cite></div>
     </div>
+    <p style="margin-top:18px"><a class="btn ghost" href="/standards/">Our standards &amp; corrections →</a></p>
   </section>
 
   <section id="about">
     <div class="about">
-      <img src="img/host.webp?v=1795284240" alt="The host of Fulcrum Brief" loading="lazy">
+      <img src="img/host.webp?v=1795284240" alt="Damyan Ivanov, host of Fulcrum Brief" loading="lazy">
       <div class="txt">
         <span class="kicker">About</span>
         <h2 class="sec" style="margin:6px 0 10px">Analysis from the <span>eastern flank</span></h2>
-        <p>Fulcrum Brief covers the wars and conflicts shaping the world, wherever they flare up, and what they mean for your money and your life. Every claim is checked and every source is named on screen and in the description.</p><p>Each video finds the pivot point of a story, the moment the balance shifted, and ends on what it means for everyday life: prices at the pump, groceries, markets, security.</p><p>Based in the Black Sea region, close to NATO&#x27;s eastern flank. New full videos every Monday, Wednesday and Friday.</p>
+        <p>Fulcrum Brief covers the wars and conflicts shaping the world, wherever they flare up, and what they mean for your money and your life. Every claim is checked and every source is named on screen and in the description.</p><p>Each video finds the pivot point of a story, the moment the balance shifted, and ends on what it means for everyday life: prices at the pump, groceries, markets, security.</p><p>New full videos every Monday, Wednesday and Friday.</p>
+        <h3 class="hostname">Damyan Ivanov <span>Host</span></h3>
+        <p>Fulcrum Brief is presented by Damyan Ivanov. He lives in Bulgaria, in the Black Sea region on NATO&#x27;s eastern flank, across the sea from the war in Ukraine and beside the shipping lanes and energy routes it keeps hitting.</p><p>Each briefing follows the same discipline: find the pivot point, show every source on screen, label claims as claims, and end on what it means for the people watching.</p>
       </div>
     </div>
   </section>
@@ -370,7 +375,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 </main>
 
 <footer><div class="wrap">
-  <span>© 2026 Fulcrum Brief · The pivot points of global power</span>
+  <span>© 2026 Fulcrum Brief · The pivot points of global power · <a href="/standards/">Standards &amp; corrections</a></span>
   <span><a href="https://www.youtube.com/@FulcrumBrief" target="_blank" rel="noopener">YouTube</a> · <a href="https://x.com/FulcrumBrief" target="_blank" rel="noopener">X</a> · <a href="https://www.facebook.com/1439591135908976" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/fulcrumbrief" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.tiktok.com/@fulcrumbrief" target="_blank" rel="noopener">TikTok</a> · <a href="https://www.threads.com/@fulcrumbrief" target="_blank" rel="noopener">Threads</a> · <a href="https://bsky.app/profile/fulcrumbrief.bsky.social" target="_blank" rel="noopener">Bluesky</a> · <a href="https://medium.com/@fulcrumbrief" target="_blank" rel="noopener">Medium</a> · <a href="https://www.pinterest.com/fulcrumbrief/" target="_blank" rel="noopener">Pinterest</a> · <a href="https://flipboard.com/@fulcrumbrief" target="_blank" rel="noopener">Flipboard</a> · <a href="https://www.quora.com/profile/Damyan-Ivanov-2" target="_blank" rel="noopener">Quora</a> · <a href="https://github.com/fulcrumbrief" target="_blank" rel="noopener">GitHub</a> · <a href="mailto:contacttripointmedia@gmail.com">Contact</a></span>
 </div></footer>
 </body>

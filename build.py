@@ -5,6 +5,7 @@
 
 New video (only once it's live): download its LIVE YouTube thumbnail (https://i.ytimg.com/vi/<id>/maxresdefault.jpg;
 the host may change it after upload) to website/thumbs/vN.jpg at 640 px wide, and add an entry at the TOP of "videos".
+Also give it "code": the delivery folder name (e.g. "06_2026-11-23_war-preparedness"), so briefings.py builds its page.
 New Short (only once public): a frame at ~1.2 s from assets/video/vN_short-K.mp4 -> website/shorts/<id>.jpg (360 px wide; YouTube oardefault frames look odd),
 add it at the TOP of "shorts". Medium articles are read automatically from the feed at build time.
 The stats strip (briefings, Shorts) counts the PUBLIC videos on the channel at build time via the YouTube Data API (read-only).
@@ -96,21 +97,31 @@ def channel_counts():
 
 
 CNT = channel_counts()
+sys.path.insert(0, HERE)
+import briefings  # noqa: E402
+BL = briefings.build_all(S)  # video id -> /briefing/<slug>/
 V = S["videos"]
 lead = V[0]
 
 org = {
-    "@context": "https://schema.org", "@type": "NewsMediaOrganization", "name": "Fulcrum Brief",
+    "@context": "https://schema.org", "@type": "NewsMediaOrganization", "@id": S["url"] + "/#org", "name": "Fulcrum Brief",
     "alternateName": "@FulcrumBrief", "url": S["url"], "logo": S["url"] + "/logo.png",
     "description": S["description"], "slogan": S["tagline"], "sameAs": [p["url"] for p in S["profiles"]],
     "email": S["contact"]["email"],
     "contactPoint": {"@type": "ContactPoint", "contactType": "editorial and business inquiries", "email": S["contact"]["email"]},
+    "correctionsPolicy": S["url"] + "/standards/#corrections", "verificationFactCheckingPolicy": S["url"] + "/standards/",
+    "ethicsPolicy": S["url"] + "/standards/",
+    "employee": {"@type": "Person", "@id": S["url"] + "/#host", "name": S["host"]["name"], "jobTitle": "Host", "sameAs": S["host"]["sameAs"]},
 }
 yt = "https://www.youtube.com/watch?v="
 
-video_cards = "\n".join(f'''      <a class="card" href="{yt}{v["id"]}" target="_blank" rel="noopener">
+def vlink(v):
+    return (f'href="{BL[v["id"]]}"' if v["id"] in BL else f'href="{yt}{v["id"]}" target="_blank" rel="noopener"')
+
+
+video_cards = "\n".join(f'''      <a class="card" {vlink(v)}>
         <div class="thumb"><img src="thumbs/{v["thumb"]}?v={ver("thumbs/" + v["thumb"])}" alt="{e(v["title"])}" width="640" height="360"><span class="play"></span></div>
-        <span class="kicker">{e(v["date"])}</span>
+        <span class="kicker">{e(v["date"])}{" · Sources &amp; transcript" if v["id"] in BL else ""}</span>
         <h3>{e(v["title"])}</h3>
         <p>{e(v["blurb"])}</p>
       </a>''' for v in V[1:])
@@ -262,6 +273,8 @@ h2.sec span{{color:var(--amber)}}
 .about img{{display:block;width:100%;max-width:380px;height:auto;margin:0 auto}}
 .about .txt{{padding-bottom:30px}}
 .about p{{color:var(--steel)}}
+.hostname{{font:700 26px "Barlow Condensed",sans-serif;margin:20px 0 4px;text-transform:uppercase;letter-spacing:.04em}}
+.hostname span{{color:var(--amber);font-size:16px;letter-spacing:.14em;margin-left:8px}}
 .contact{{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start;background:var(--navy2);border:1px solid rgba(159,176,195,.15);border-radius:14px;padding:34px}}
 .contact p{{color:var(--steel);max-width:46ch}}
 .contact .btn{{display:inline-block;margin-top:8px;word-break:break-all}}
@@ -288,7 +301,7 @@ footer .wrap{{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap
 <body>
 <nav><div class="wrap">
   <a class="brand" href="#top"><img src="favicon.svg" alt="">Fulcrum <b>Brief</b></a>
-  <div class="links"><a href="#briefings">Briefings</a><a href="#articles">Articles</a><a href="#shorts">Shorts</a><a href="#topics">Topics</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+  <div class="links"><a href="#briefings">Briefings</a><a href="#articles">Articles</a><a href="#shorts">Shorts</a><a href="#topics">Topics</a><a href="/standards/">Standards</a><a href="#about">About</a><a href="#contact">Contact</a></div>
   <a class="btn" href="https://www.youtube.com/@FulcrumBrief?sub_confirmation=1" target="_blank" rel="noopener">Subscribe</a>
 </div></nav>
 
@@ -299,7 +312,7 @@ footer .wrap{{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap
     <p class="lead">{e(S["description"])}</p>
     <div class="ctas">
       <a class="btn" href="{yt}{lead["id"]}" target="_blank" rel="noopener">Watch the latest</a>
-      <a class="btn ghost" href="#articles">Read the articles</a>
+      <a class="btn ghost" {vlink(lead)}>Sources &amp; transcript</a>
     </div>
   </div>
   <a class="feature" href="{yt}{lead["id"]}" target="_blank" rel="noopener">
@@ -364,15 +377,18 @@ footer .wrap{{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap
         <blockquote>"We are not going to fight Europe… But if Europe suddenly wants to fight and starts, we are ready right now."</blockquote>
         <cite>Vladimir Putin to reporters, 2 December 2025. Translated word for word, then checked against Danish military intelligence.</cite></div>
     </div>
+    <p style="margin-top:18px"><a class="btn ghost" href="/standards/">Our standards &amp; corrections →</a></p>
   </section>
 
   <section id="about">
     <div class="about">
-      <img src="img/host.webp?v={ver('img/host.webp')}" alt="The host of Fulcrum Brief" loading="lazy">
+      <img src="img/host.webp?v={ver('img/host.webp')}" alt="{e(S["host"]["name"])}, host of Fulcrum Brief" loading="lazy">
       <div class="txt">
         <span class="kicker">About</span>
         <h2 class="sec" style="margin:6px 0 10px">Analysis from the <span>eastern flank</span></h2>
         {"".join(f"<p>{e(p)}</p>" for p in S["about"])}
+        <h3 class="hostname">{e(S["host"]["name"])} <span>Host</span></h3>
+        {"".join(f"<p>{e(p)}</p>" for p in S["host"]["bio"])}
       </div>
     </div>
   </section>
@@ -402,7 +418,7 @@ footer .wrap{{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap
 </main>
 
 <footer><div class="wrap">
-  <span>© 2026 Fulcrum Brief · The pivot points of global power</span>
+  <span>© 2026 Fulcrum Brief · The pivot points of global power · <a href="/standards/">Standards &amp; corrections</a></span>
   <span>{" · ".join(f'<a href="{p["url"]}" target="_blank" rel="noopener">{e(p["name"])}</a>' for p in S["profiles"])} · <a href="mailto:{S["contact"]["email"]}">Contact</a></span>
 </div></footer>
 </body>
