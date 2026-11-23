@@ -270,7 +270,7 @@ h2.sec span{{color:var(--amber)}}
 .quote cite{{color:var(--steel);font-style:normal;font-size:15px}}
 .about{{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:end;background:radial-gradient(500px 300px at 20% 80%,rgba(242,169,0,.16),transparent 70%),var(--navy2);
   border:1px solid var(--slate);border-radius:18px;padding:30px 30px 0;overflow:hidden}}
-.about img{{display:block;width:100%;max-width:380px;height:auto;margin:0 auto}}
+.about img{{display:block;width:100%;max-width:380px;height:auto;margin:0 auto;align-self:center;justify-self:center}}
 .about .txt{{padding-bottom:30px}}
 .about p{{color:var(--steel)}}
 .hostname{{font:700 26px "Barlow Condensed",sans-serif;margin:20px 0 4px;text-transform:uppercase;letter-spacing:.04em}}
