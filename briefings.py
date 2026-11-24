@@ -90,17 +90,40 @@ def md_inline(s):
     return out
 
 
+# Public wording for internal notes in SOURCES.md (credits are never dropped, only reworded).
+PUBLIC = [
+    (re.compile(r"\s*\(cut out and relit onto the host'?s vidIQ thumbnail\)", re.I), " (thumbnail)"),
+    (re.compile(r"the host'?s SZ Whooshes & Risers pack \(bought, no credit needed\)", re.I), "SZ Whooshes & Risers pack (licensed)"),
+    (re.compile(r"SZ Whooshes & Risers pack,? \(?bought by the host,? no (?:attribution|credit) needed\)?\.?", re.I), "SZ Whooshes & Risers pack (licensed)."),
+    (re.compile(r"`fulcrum-brief-outro\.mp4` uses", re.I), "The channel outro uses"),
+    (re.compile(r",? so that credit stays in the description", re.I), ""),
+    (re.compile(r"No intro sting \([^)]*\)\.\s*", re.I), ""),
+    (re.compile(r"Built by the host in vidIQ.*$", re.I), "Fulcrum Brief (own design)"),
+    (re.compile(r"^`?thumbnail\.png`?:? made by the host with vidIQ.*$", re.I), "Thumbnail: Fulcrum Brief (own design)."),
+    (re.compile(r"\bvidIQ\b ?", re.I), ""),
+]
+DROP_LINE = re.compile(r"^(\|\s*)?(not used|downloaded, not used)|no intro sting in this video|^\*\*?note", re.I)
+
+
+def public(s):
+    for rx, rep in PUBLIC:
+        s = rx.sub(rep, s)
+    return s
+
+
 def parse_sources(md):
-    """Reporting / quotes sections of SOURCES.md as HTML (footage, photo and music credits stay in the YouTube description)."""
-    out, keep, table = [], False, []
+    """All of SOURCES.md as HTML: reporting, quotes, footage, photos, maps, music and sound, every credit and licence."""
+    out, table = [], []
 
     def end_table():
         if not table:
             return
         rows = [[c.strip() for c in r.strip().strip("|").split("|")] for r in table if not re.match(r"^\|?\s*:?-{3,}", r.strip())]
         head, body = rows[0], rows[1:]
-        h = "".join(f"<th>{e(c)}</th>" for c in head)
-        b = "".join("<tr>" + "".join(f"<td>{md_inline(c)}</td>" for c in r) + "</tr>" for r in body)
+        drop = [i for i, h in enumerate(head) if h.lower() == "file" and len(head) >= 3]
+        keep = [i for i in range(len(head)) if i not in drop]
+        h = "".join(f"<th>{e(head[i])}</th>" for i in keep)
+        b = "".join("<tr>" + "".join(f"<td>{md_inline(public(r[i]))}</td>" for i in keep if i < len(r)) + "</tr>" for r in body)
         out.append(f'<div class="tbl"><table><thead><tr>{h}</tr></thead><tbody>{b}</tbody></table></div>')
         table.clear()
 
@@ -111,26 +134,23 @@ def parse_sources(md):
             continue
         if s.startswith("## "):
             end_table()
-            name = s[3:]
-            keep = not any(k in name.lower() for k in SKIP_SECTIONS)
-            if keep:
-                out.append(f"<h3>{e(re.sub(r'\s*\(.*?\)\s*$', '', name))}</h3>")
+            out.append(f"<h3>{e(re.sub(r'\s*\(.*?\)\s*$', '', s[3:]))}</h3>")
             intro_done = True
+            continue
+        if DROP_LINE.search(s):
             continue
         if not intro_done:
             if s and not INTERNAL.search(s):
                 out.append(f'<p class="muted">{md_inline(s)}</p>')
-            continue
-        if not keep or INTERNAL.search(s):
             continue
         if s.startswith("|"):
             table.append(s)
             continue
         end_table()
         if s.startswith(("- ", "* ")):
-            out.append(f"<p>• {md_inline(s[2:])}</p>")
-        elif s:
-            out.append(f"<p>{md_inline(s)}</p>")
+            out.append(f"<p>• {md_inline(public(s[2:]))}</p>")
+        elif s and s != "---":
+            out.append(f"<p>{md_inline(public(s))}</p>")
     end_table()
     return "\n".join(out)
 
@@ -312,8 +332,9 @@ def briefing_page(S, v, c):
       <a class="btn" href="https://www.youtube.com/watch?v={vid}" target="_blank" rel="noopener">Watch on YouTube</a>
     </aside>
   </div>
-  <section id="sources"><h2>Sources</h2>{c.get("sources", "")}
-    <p class="muted">Footage, photo and music credits are listed in the <a href="https://www.youtube.com/watch?v={vid}" target="_blank" rel="noopener">video description</a>. Spotted an error? <a href="/standards/#corrections">Tell us</a> and we will correct it in public.</p></section>
+  <section id="sources"><h2>Sources &amp; resources</h2>
+    <p class="muted">Every report, document, quote, photo, clip, map and piece of music used in this video, with its licence. Spotted an error? <a href="/standards/#corrections">Tell us</a> and we will correct it in public.</p>
+    {c.get("sources", "")}</section>
   {f'<section id="transcript"><details><summary><h2>Full transcript</h2></summary>{trans}</details></section>' if trans else ""}
 </article>'''
     path = f"/briefing/{slug_of(v['code'])}/"
