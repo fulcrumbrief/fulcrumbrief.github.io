@@ -1,269 +1,277 @@
 {
-  "url": "https://fulcrumbrief.github.io",
-  "tagline": "The pivot points of global power",
-  "description": "Every war has a pivot point: the moment the balance of power moves. Fulcrum Brief explains the wars and crises shaping the world with maps and sourced numbers, and shows what each one costs you.",
-  "pinterest_verify": "ca687cbf0aa69649f3c9272c0bcaaf56",
-  "about": [
-    "Fulcrum Brief covers the wars and conflicts shaping the world, wherever they flare up, and what they mean for your money and your life. Every claim is checked and every source is named on screen and in the description.",
-    "Each video finds the pivot point of a story, the moment the balance shifted, and ends on what it means for everyday life: prices at the pump, groceries, markets, security.",
-    "New full videos every Monday, Wednesday and Friday."
-  ],
-  "videos": [
-    {
-      "id": "rsqPreXS7qc",
-      "thumb": "v6.jpg",
-      "date": "Nov 2026",
-      "title": "NATO Told 32 Countries to PREPARE. Here's What For",
-      "blurb": "Sweden mailed every home a crisis booklet. US bases plan for 90 days on their own. What NATO's new resilience rules ask of 32 countries, and of you.",
-      "code": "06_2026-11-23_war-preparedness"
-    },
-    {
-      "id": "R-xiFPGLiQs",
-      "thumb": "v5.jpg",
-      "date": "Nov 2026",
-      "title": "Ukraine Is Setting Russia's War Money on Fire",
-      "blurb": "Nine refineries in one week, rationing at the pump, a deficit near double the plan. Why it still isn't a collapse.",
-      "code": "05_2026-11-20_russia-oil-war"
-    },
-    {
-      "id": "4Yg1JGsH5Xo",
-      "thumb": "v4.jpg",
-      "date": "Nov 2026",
-      "title": "The First 72 Hours of a Russia-NATO War",
-      "blurb": "What the published war games show about the first three days, and why the weak spot is time, not tanks.",
-      "code": "04_2026-11-18_russia-nato-war"
-    },
-    {
-      "id": "DyT1vXEYxPk",
-      "thumb": "v3.jpg",
-      "date": "Nov 2026",
-      "title": "Trump Is Flying to China With No US Carrier Left Near Taiwan",
-      "blurb": "Eleven carriers, none near China. What Beijing learns from a stretched US Navy.",
-      "code": "03_2026-11-17_trump-china-carriers"
-    },
-    {
-      "id": "zOFSzSw9s6g",
-      "thumb": "v2.jpg",
-      "date": "Nov 2026",
-      "title": "Trump Just Lost Congress… What Comes Next With Iran",
-      "blurb": "The strikes approved and called off, the January window, and what a divided Congress means for oil.",
-      "code": "02_2026-11-10_trump-iran-decision"
-    },
-    {
-      "id": "pSGrvRmc7LI",
-      "thumb": "v1.jpg",
-      "date": "Nov 2026",
-      "title": "What Happens if Russia Gets Its Own Starlink Over Ukraine",
-      "blurb": "Satellite internet changed the war. What happens if Moscow gets its own network over the front line.",
-      "code": "01_2026-11-08_ukraine-space-war"
-    }
-  ],
-  "profiles": [
-    {
-      "name": "YouTube",
-      "url": "https://www.youtube.com/@FulcrumBrief"
-    },
-    {
-      "name": "X",
-      "url": "https://x.com/FulcrumBrief"
-    },
-    {
-      "name": "Facebook",
-      "url": "https://www.facebook.com/1439591135908976"
-    },
-    {
-      "name": "Instagram",
-      "url": "https://www.instagram.com/fulcrumbrief"
-    },
-    {
-      "name": "TikTok",
-      "url": "https://www.tiktok.com/@fulcrumbrief"
-    },
-    {
-      "name": "Threads",
-      "url": "https://www.threads.com/@fulcrumbrief"
-    },
-    {
-      "name": "Bluesky",
-      "url": "https://bsky.app/profile/fulcrumbrief.bsky.social"
-    },
-    {
-      "name": "Medium",
-      "url": "https://medium.com/@fulcrumbrief"
-    },
-    {
-      "name": "Pinterest",
-      "url": "https://www.pinterest.com/fulcrumbrief/"
-    },
-    {
-      "name": "Flipboard",
-      "url": "https://flipboard.com/@fulcrumbrief"
-    },
-    {
-      "name": "Quora",
-      "url": "https://www.quora.com/profile/Damyan-Ivanov-2"
-    },
-    {
-      "name": "GitHub",
-      "url": "https://github.com/fulcrumbrief"
-    }
-  ],
-  "shorts": [
-    {
-      "id": "Yk0pQhvQQKE",
-      "title": "Why US Diesel Hit an All-Time Record This Fall"
-    },
-    {
-      "id": "QeUI-wZvJko",
-      "title": "Moscow Calls Its Fuel Shortage \"Insignificant\""
-    },
-    {
-      "id": "ALSO8l7Kino",
-      "title": "Russia Is Rationing Gasoline for the Third Time This Year"
-    },
-    {
-      "id": "0vra8L3ob-A",
-      "title": "Ukraine Hit 30% of Russia's Refineries. Not Quite."
-    },
-    {
-      "id": "uRenhnpFBwE",
-      "title": "Putin on War With Europe: \"We Are Ready Right Now\""
-    },
-    {
-      "id": "PFFR41S_eNQ",
-      "title": "What a War in Europe Cost Americans Last Time"
-    },
-    {
-      "id": "ThKT9u84jcQ",
-      "title": "In This War Game, Russia Beat NATO in 3 Days"
-    },
-    {
-      "id": "Tz5d087FoS8",
-      "title": "Russia's War Plan for NATO Doesn't Start With Tanks"
-    },
-    {
-      "id": "5qQvTTCrcaI",
-      "title": "The Real Danger for Taiwan Isn't an Attack"
-    },
-    {
-      "id": "rJGjeJCQQj8",
-      "title": "China Is Practicing to Keep the US Navy Out"
-    }
-  ],
-  "topics": [
-    {
-      "name": "Ukraine & Russia",
-      "img": "topic-russia.jpg",
-      "text": "The front, the refinery war, NATO's eastern flank and what Moscow actually says.",
-      "url": "https://www.pinterest.com/fulcrumbrief/ukraine-russia/"
-    },
-    {
-      "name": "Middle East & Iran",
-      "img": "topic-mideast.jpg",
-      "text": "Iran, Israel, Hormuz and the Red Sea: where the carriers are and why it matters.",
-      "url": "https://www.pinterest.com/fulcrumbrief/middle-east-iran/"
-    },
-    {
-      "name": "China & Taiwan",
-      "img": "topic-china.jpg",
-      "text": "Beijing's drills, the US Navy's reach and the lessons China is learning.",
-      "url": "https://www.pinterest.com/fulcrumbrief/china-taiwan/"
-    },
-    {
-      "name": "War & your money",
-      "img": "topic-oil.jpg",
-      "text": "How a war far away shows up in prices, markets and your savings.",
-      "url": "https://www.pinterest.com/fulcrumbrief/oil-energy-prices/"
-    }
-  ],
-  "numbers": [
-    {
-      "img": "num-gas.jpg",
-      "caption": "What the last war in Europe did to US gas (AAA)",
-      "video": "4Yg1JGsH5Xo"
-    },
-    {
-      "img": "num-diesel.jpg",
-      "caption": "Record US diesel, September 2026 (Reuters)",
-      "video": "R-xiFPGLiQs"
-    },
-    {
-      "img": "num-refineries.jpg",
-      "caption": "Russian refineries disrupted in one week (Reuters)",
-      "video": "R-xiFPGLiQs"
-    }
-  ],
-  "medium_feed": "https://medium.com/feed/@fulcrumbrief",
-  "contact": {
-    "email": "contacttripointmedia@gmail.com",
-    "text": "Story tip, correction, press or partnership? Write to us. Spot an error and we'll correct it in public."
+ "url": "https://fulcrumbrief.github.io",
+ "tagline": "The pivot points of global power",
+ "description": "Every war has a pivot point: the moment the balance of power moves. Fulcrum Brief explains the wars and crises shaping the world with maps and sourced numbers, and shows what each one costs you.",
+ "pinterest_verify": "ca687cbf0aa69649f3c9272c0bcaaf56",
+ "about": [
+  "Fulcrum Brief covers the wars and conflicts shaping the world, wherever they flare up, and what they mean for your money and your life. Every claim is checked and every source is named on screen and in the description.",
+  "Each video finds the pivot point of a story, the moment the balance shifted, and ends on what it means for everyday life: prices at the pump, groceries, markets, security.",
+  "New full videos every Monday, Wednesday and Friday."
+ ],
+ "videos": [
+  {
+   "id": "nIvqdESKYiE",
+   "thumb": "v7.jpg",
+   "date": "Nov 2026",
+   "title": "The Middle East's Energy Crisis Just Got Much WORSE",
+   "blurb": "21.6 million barrels a day used to pass Hormuz. The way around it runs through one Saudi pipeline and the Red Sea, and both are now inside the war.",
+   "code": "07_2026-11-25_oil-gates"
   },
-  "host": {
-    "name": "Damyan Ivanov",
-    "bio": [
-      "Fulcrum Brief is presented by Damyan Ivanov, based in Eastern Europe on NATO's eastern flank, close to the war in Ukraine and to the shipping lanes and energy routes it keeps hitting.",
-      "Each briefing follows the same discipline: find the pivot point, show every source on screen, label claims as claims, and end on what it means for the people watching."
-    ],
-    "sameAs": [
-      "https://www.quora.com/profile/Damyan-Ivanov-2"
-    ]
+  {
+   "id": "rsqPreXS7qc",
+   "thumb": "v6.jpg",
+   "date": "Nov 2026",
+   "title": "NATO Told 32 Countries to PREPARE. Here's What For",
+   "blurb": "Sweden mailed every home a crisis booklet. US bases plan for 90 days on their own. What NATO's new resilience rules ask of 32 countries, and of you.",
+   "code": "06_2026-11-23_war-preparedness"
   },
-  "standards": {
-    "intro": "Fulcrum Brief covers wars, conflicts and what they cost people far from the front. Our credibility is the product, so these are the rules every briefing follows.",
-    "sections": [
-      {
-        "h": "Sources",
-        "p": [
-          "Every fact in a briefing comes from a named source: established news outlets, official statements and data, international bodies and think tanks. The outlet and date are shown on screen, listed in the video description and published with links on each briefing page.",
-          "A fact goes in when it is backed by a primary source (an official document, statement or dataset) or by two credible outlets. When only one outlet reports something, we say so."
-        ]
-      },
-      {
-        "h": "Claims are labelled as claims",
-        "p": [
-          "Governments and armies at war make claims that cannot be checked right away. We attribute them (\"Kyiv says\", \"Moscow claims\", \"the Pentagon says\") and never present them as established fact. Figures that cannot be tied to a date and a source stay out."
-        ]
-      },
-      {
-        "h": "Quotes and posts, word for word",
-        "p": [
-          "Quotes and social media posts are shown exactly as published, with the real account or outlet and the date. We do not shorten a quote in a way that changes its meaning, and a paraphrase is shown without quote marks."
-        ]
-      },
-      {
-        "h": "In Moscow's words",
-        "p": [
-          "When a Russian-language source matters to the story, we show the original, read it, give a word-for-word translation, and then check it against the record."
-        ]
-      },
-      {
-        "h": "Numbers",
-        "p": [
-          "Prices are in US dollars unless stated, oil prices name the benchmark (Brent or WTI), and distances are in miles with kilometres in brackets. Every number carries its date, and snapshots say \"as of\" with the month."
-        ]
-      },
-      {
-        "h": "Maps and footage",
-        "p": [
-          "Our maps are built in house on public map data (Natural Earth), dated, and sourced wherever a line is contested. Footage and photos are public domain or openly licensed (for example US Department of Defense/DVIDS, Wikimedia Commons, Pixabay) and credited in each description.",
-          "We do not show casualties, graphic combat or people being harmed."
-        ]
-      },
-      {
-        "h": "Independence and money",
-        "p": [
-          "Fulcrum Brief is independent and not affiliated with any government, party or company. We have no sponsors at the moment; if that changes, sponsorships will be disclosed clearly in the video and the description.",
-          "Coverage of markets, savings and prices is news and analysis, never personal investment advice."
-        ]
-      },
-      {
-        "h": "Voice",
-        "p": [
-          "We write as analysts, not partisans: we name the actor (Washington, Moscow, Kyiv, Beijing, NATO), give each side's stated position in its own words, and keep our verdicts separate from the facts."
-        ]
-      }
-    ],
-    "corrections_policy": "If we get a fact wrong, we fix it in public. Write to us with the video, the timestamp and what is wrong. A confirmed error is corrected in the video description and on the briefing page, and logged below with the date and what changed. Corrections are never made silently.",
-    "corrections": []
+  {
+   "id": "R-xiFPGLiQs",
+   "thumb": "v5.jpg",
+   "date": "Nov 2026",
+   "title": "Ukraine Is Setting Russia's War Money on Fire",
+   "blurb": "Nine refineries in one week, rationing at the pump, a deficit near double the plan. Why it still isn't a collapse.",
+   "code": "05_2026-11-20_russia-oil-war"
+  },
+  {
+   "id": "4Yg1JGsH5Xo",
+   "thumb": "v4.jpg",
+   "date": "Nov 2026",
+   "title": "The First 72 Hours of a Russia-NATO War",
+   "blurb": "What the published war games show about the first three days, and why the weak spot is time, not tanks.",
+   "code": "04_2026-11-18_russia-nato-war"
+  },
+  {
+   "id": "DyT1vXEYxPk",
+   "thumb": "v3.jpg",
+   "date": "Nov 2026",
+   "title": "Trump Is Flying to China With No US Carrier Left Near Taiwan",
+   "blurb": "Eleven carriers, none near China. What Beijing learns from a stretched US Navy.",
+   "code": "03_2026-11-17_trump-china-carriers"
+  },
+  {
+   "id": "zOFSzSw9s6g",
+   "thumb": "v2.jpg",
+   "date": "Nov 2026",
+   "title": "Trump Just Lost Congress… What Comes Next With Iran",
+   "blurb": "The strikes approved and called off, the January window, and what a divided Congress means for oil.",
+   "code": "02_2026-11-10_trump-iran-decision"
+  },
+  {
+   "id": "pSGrvRmc7LI",
+   "thumb": "v1.jpg",
+   "date": "Nov 2026",
+   "title": "What Happens if Russia Gets Its Own Starlink Over Ukraine",
+   "blurb": "Satellite internet changed the war. What happens if Moscow gets its own network over the front line.",
+   "code": "01_2026-11-08_ukraine-space-war"
   }
+ ],
+ "profiles": [
+  {
+   "name": "YouTube",
+   "url": "https://www.youtube.com/@FulcrumBrief"
+  },
+  {
+   "name": "X",
+   "url": "https://x.com/FulcrumBrief"
+  },
+  {
+   "name": "Facebook",
+   "url": "https://www.facebook.com/1439591135908976"
+  },
+  {
+   "name": "Instagram",
+   "url": "https://www.instagram.com/fulcrumbrief"
+  },
+  {
+   "name": "TikTok",
+   "url": "https://www.tiktok.com/@fulcrumbrief"
+  },
+  {
+   "name": "Threads",
+   "url": "https://www.threads.com/@fulcrumbrief"
+  },
+  {
+   "name": "Bluesky",
+   "url": "https://bsky.app/profile/fulcrumbrief.bsky.social"
+  },
+  {
+   "name": "Medium",
+   "url": "https://medium.com/@fulcrumbrief"
+  },
+  {
+   "name": "Pinterest",
+   "url": "https://www.pinterest.com/fulcrumbrief/"
+  },
+  {
+   "name": "Flipboard",
+   "url": "https://flipboard.com/@fulcrumbrief"
+  },
+  {
+   "name": "Quora",
+   "url": "https://www.quora.com/profile/Damyan-Ivanov-2"
+  },
+  {
+   "name": "GitHub",
+   "url": "https://github.com/fulcrumbrief"
+  }
+ ],
+ "shorts": [
+  {
+   "id": "Yk0pQhvQQKE",
+   "title": "Why US Diesel Hit an All-Time Record This Fall"
+  },
+  {
+   "id": "QeUI-wZvJko",
+   "title": "Moscow Calls Its Fuel Shortage \"Insignificant\""
+  },
+  {
+   "id": "ALSO8l7Kino",
+   "title": "Russia Is Rationing Gasoline for the Third Time This Year"
+  },
+  {
+   "id": "0vra8L3ob-A",
+   "title": "Ukraine Hit 30% of Russia's Refineries. Not Quite."
+  },
+  {
+   "id": "uRenhnpFBwE",
+   "title": "Putin on War With Europe: \"We Are Ready Right Now\""
+  },
+  {
+   "id": "PFFR41S_eNQ",
+   "title": "What a War in Europe Cost Americans Last Time"
+  },
+  {
+   "id": "ThKT9u84jcQ",
+   "title": "In This War Game, Russia Beat NATO in 3 Days"
+  },
+  {
+   "id": "Tz5d087FoS8",
+   "title": "Russia's War Plan for NATO Doesn't Start With Tanks"
+  },
+  {
+   "id": "5qQvTTCrcaI",
+   "title": "The Real Danger for Taiwan Isn't an Attack"
+  },
+  {
+   "id": "rJGjeJCQQj8",
+   "title": "China Is Practicing to Keep the US Navy Out"
+  }
+ ],
+ "topics": [
+  {
+   "name": "Ukraine & Russia",
+   "img": "topic-russia.jpg",
+   "text": "The front, the refinery war, NATO's eastern flank and what Moscow actually says.",
+   "url": "https://www.pinterest.com/fulcrumbrief/ukraine-russia/"
+  },
+  {
+   "name": "Middle East & Iran",
+   "img": "topic-mideast.jpg",
+   "text": "Iran, Israel, Hormuz and the Red Sea: where the carriers are and why it matters.",
+   "url": "https://www.pinterest.com/fulcrumbrief/middle-east-iran/"
+  },
+  {
+   "name": "China & Taiwan",
+   "img": "topic-china.jpg",
+   "text": "Beijing's drills, the US Navy's reach and the lessons China is learning.",
+   "url": "https://www.pinterest.com/fulcrumbrief/china-taiwan/"
+  },
+  {
+   "name": "War & your money",
+   "img": "topic-oil.jpg",
+   "text": "How a war far away shows up in prices, markets and your savings.",
+   "url": "https://www.pinterest.com/fulcrumbrief/oil-energy-prices/"
+  }
+ ],
+ "numbers": [
+  {
+   "img": "num-gas.jpg",
+   "caption": "What the last war in Europe did to US gas (AAA)",
+   "video": "4Yg1JGsH5Xo"
+  },
+  {
+   "img": "num-diesel.jpg",
+   "caption": "Record US diesel, September 2026 (Reuters)",
+   "video": "R-xiFPGLiQs"
+  },
+  {
+   "img": "num-refineries.jpg",
+   "caption": "Russian refineries disrupted in one week (Reuters)",
+   "video": "R-xiFPGLiQs"
+  }
+ ],
+ "medium_feed": "https://medium.com/feed/@fulcrumbrief",
+ "contact": {
+  "email": "contacttripointmedia@gmail.com",
+  "text": "Story tip, correction, press or partnership? Write to us. Spot an error and we'll correct it in public."
+ },
+ "host": {
+  "name": "Damyan Ivanov",
+  "bio": [
+   "Fulcrum Brief is presented by Damyan Ivanov, based in Eastern Europe on NATO's eastern flank, close to the war in Ukraine and to the shipping lanes and energy routes it keeps hitting.",
+   "Each briefing follows the same discipline: find the pivot point, show every source on screen, label claims as claims, and end on what it means for the people watching."
+  ],
+  "sameAs": [
+   "https://www.quora.com/profile/Damyan-Ivanov-2"
+  ]
+ },
+ "standards": {
+  "intro": "Fulcrum Brief covers wars, conflicts and what they cost people far from the front. Our credibility is the product, so these are the rules every briefing follows.",
+  "sections": [
+   {
+    "h": "Sources",
+    "p": [
+     "Every fact in a briefing comes from a named source: established news outlets, official statements and data, international bodies and think tanks. The outlet and date are shown on screen, listed in the video description and published with links on each briefing page.",
+     "A fact goes in when it is backed by a primary source (an official document, statement or dataset) or by two credible outlets. When only one outlet reports something, we say so."
+    ]
+   },
+   {
+    "h": "Claims are labelled as claims",
+    "p": [
+     "Governments and armies at war make claims that cannot be checked right away. We attribute them (\"Kyiv says\", \"Moscow claims\", \"the Pentagon says\") and never present them as established fact. Figures that cannot be tied to a date and a source stay out."
+    ]
+   },
+   {
+    "h": "Quotes and posts, word for word",
+    "p": [
+     "Quotes and social media posts are shown exactly as published, with the real account or outlet and the date. We do not shorten a quote in a way that changes its meaning, and a paraphrase is shown without quote marks."
+    ]
+   },
+   {
+    "h": "In Moscow's words",
+    "p": [
+     "When a Russian-language source matters to the story, we show the original, read it, give a word-for-word translation, and then check it against the record."
+    ]
+   },
+   {
+    "h": "Numbers",
+    "p": [
+     "Prices are in US dollars unless stated, oil prices name the benchmark (Brent or WTI), and distances are in miles with kilometres in brackets. Every number carries its date, and snapshots say \"as of\" with the month."
+    ]
+   },
+   {
+    "h": "Maps and footage",
+    "p": [
+     "Our maps are built in house on public map data (Natural Earth), dated, and sourced wherever a line is contested. Footage and photos are public domain or openly licensed (for example US Department of Defense/DVIDS, Wikimedia Commons, Pixabay) and credited in each description.",
+     "We do not show casualties, graphic combat or people being harmed."
+    ]
+   },
+   {
+    "h": "Independence and money",
+    "p": [
+     "Fulcrum Brief is independent and not affiliated with any government, party or company. We have no sponsors at the moment; if that changes, sponsorships will be disclosed clearly in the video and the description.",
+     "Coverage of markets, savings and prices is news and analysis, never personal investment advice."
+    ]
+   },
+   {
+    "h": "Voice",
+    "p": [
+     "We write as analysts, not partisans: we name the actor (Washington, Moscow, Kyiv, Beijing, NATO), give each side's stated position in its own words, and keep our verdicts separate from the facts."
+    ]
+   }
+  ],
+  "corrections_policy": "If we get a fact wrong, we fix it in public. Write to us with the video, the timestamp and what is wrong. A confirmed error is corrected in the video description and on the briefing page, and logged below with the date and what changed. Corrections are never made silently.",
+  "corrections": []
+ }
 }

@@ -1,0 +1,19 @@
+{
+  "_doc": "Pending long videos for tools/site_golive.py. Pre-filled from the delivery folder before release night; the title comes live from YouTube at go-live, the thumbnail from the live YouTube URL. An entry leaves this list once it is published on the site.",
+  "pending": [
+    {
+      "code": "07_2026-11-25_oil-gates",
+      "id": "nIvqdESKYiE",
+      "thumb": "v7.jpg",
+      "release": "2026-11-25 22:00",
+      "blurb": "21.6 million barrels a day used to pass Hormuz. The way around it runs through one Saudi pipeline and the Red Sea, and both are now inside the war."
+    },
+    {
+      "code": "08_2026-11-27_taiwan-blockade",
+      "id": "FpXvEcxnLj0",
+      "thumb": "v8.jpg",
+      "release": "2026-11-27 22:00",
+      "blurb": "China wouldn't need to storm the beaches. How a blockade of Taiwan could start with coast guard ships and customs rules, day by day, from published studies."
+    }
+  ]
+}
