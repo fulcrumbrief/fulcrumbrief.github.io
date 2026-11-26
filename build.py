@@ -412,7 +412,7 @@ footer .wrap{{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap
 
   <div class="subscribe">
     <h2>Find the pivot point first</h2>
-    <p>New full briefings every Monday, Wednesday and Friday.</p>
+    <p>Several new full briefings every week.</p>
     <a class="btn" href="https://www.youtube.com/@FulcrumBrief?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube</a>
   </div>
 </main>
