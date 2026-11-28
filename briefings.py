@@ -256,7 +256,7 @@ def shell(S, title, desc, path, body, ld, og_image):
 <nav><div class="wrap">
   <a class="brand" href="/"><img src="/favicon.svg" alt="">Fulcrum <b>Brief</b></a>
   <div class="links"><a href="/#briefings">Briefings</a><a href="/standards/">Standards</a><a href="/#about">About</a><a href="/#contact">Contact</a></div>
-  <a class="btn" href="https://www.youtube.com/@FulcrumBrief?sub_confirmation=1" target="_blank" rel="noopener">Subscribe</a>
+  <a class="btn sub" href="https://www.youtube.com/@FulcrumBrief?sub_confirmation=1" target="_blank" rel="noopener">Subscribe<small>It's free</small></a>
 </div></nav>
 <main class="wrap page">
 {body}
@@ -383,6 +383,7 @@ nav .links{display:flex;gap:20px;margin-left:auto}
 nav .links a{text-decoration:none;color:var(--steel);font:600 16px "Barlow Condensed",sans-serif;letter-spacing:.1em;text-transform:uppercase}
 nav .links a:hover{color:var(--amber)}
 .btn{display:inline-block;background:var(--amber);color:var(--navy);text-decoration:none;font:700 18px "Barlow Condensed",sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:11px 24px;border-radius:999px;white-space:nowrap}
+.btn.sub{display:inline-flex;flex-direction:column;align-items:center;line-height:1.05;padding:8px 26px}.btn.sub small{font:500 12px Barlow,sans-serif;letter-spacing:.03em;text-transform:none;opacity:.85;margin-top:3px}
 .page{padding:34px 20px 20px}
 .back{display:inline-block;margin-bottom:18px;color:var(--steel);text-decoration:none;font:600 15px "Barlow Condensed",sans-serif;letter-spacing:.1em;text-transform:uppercase}
 .kicker{display:block;color:var(--amber);font:600 15px "Barlow Condensed",sans-serif;letter-spacing:.14em;text-transform:uppercase}

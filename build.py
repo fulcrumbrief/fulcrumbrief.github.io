@@ -208,6 +208,7 @@ nav .links a:hover{{color:var(--amber)}}
   letter-spacing:.08em;text-transform:uppercase;padding:11px 24px;border-radius:999px;white-space:nowrap}}
 .btn.ghost{{background:transparent;color:var(--white);border:1px solid var(--steel)}}
 .btn:hover{{filter:brightness(1.08)}}
+.btn.sub{{display:inline-flex;flex-direction:column;align-items:center;line-height:1.05;padding:8px 26px}}.btn.sub small{{font:500 12px Barlow,sans-serif;letter-spacing:.03em;text-transform:none;opacity:.85;margin-top:3px}}
 .hero{{position:relative;overflow:hidden;border-bottom:1px solid var(--slate);
   background:radial-gradient(1200px 500px at 85% -10%,rgba(242,169,0,.13),transparent 60%),
   repeating-linear-gradient(0deg,transparent 0 59px,rgba(30,49,72,.45) 59px 60px),
@@ -310,7 +311,7 @@ footer .wrap{{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap
 <nav><div class="wrap">
   <a class="brand" href="#top"><img src="favicon.svg" alt="">Fulcrum <b>Brief</b></a>
   <div class="links"><a href="#briefings">Briefings</a><a href="/news/">News</a><a href="#articles">Articles</a><a href="#shorts">Shorts</a><a href="#topics">Topics</a><a href="/standards/">Standards</a><a href="#about">About</a><a href="#contact">Contact</a></div>
-  <a class="btn" href="https://www.youtube.com/@FulcrumBrief?sub_confirmation=1" target="_blank" rel="noopener">Subscribe</a>
+  <a class="btn sub" href="https://www.youtube.com/@FulcrumBrief?sub_confirmation=1" target="_blank" rel="noopener">Subscribe<small>It's free</small></a>
 </div></nav>
 
 <header class="hero" id="top"><div class="wrap">
@@ -428,7 +429,7 @@ footer .wrap{{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap
   <div class="subscribe">
     <h2>Find the pivot point first</h2>
     <p>Several new full briefings every week.</p>
-    <a class="btn" href="https://www.youtube.com/@FulcrumBrief?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube</a>
+    <a class="btn sub" href="https://www.youtube.com/@FulcrumBrief?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube<small>It's free · new briefings every week</small></a>
   </div>
 </main>
 
