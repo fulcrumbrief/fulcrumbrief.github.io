@@ -100,6 +100,8 @@ CNT = channel_counts()
 sys.path.insert(0, HERE)
 import briefings  # noqa: E402
 BL = briefings.build_all(S)  # video id -> /briefing/<slug>/
+import news  # noqa: E402
+NEWS = news.build(S)  # /news/ page + latest items for the home page
 V = S["videos"]
 lead = V[0]
 
@@ -132,6 +134,12 @@ article_cards = "\n".join(f'''      <a class="article" href="{e(a["link"])}" tar
         <p>{e(a["excerpt"])}</p>
         <span class="more">Read on Medium →</span>
       </a>''' for a in ARTS[:6]) or '<p class="muted">Articles are on their way.</p>'
+
+news_cards = "\n".join(f"""      <a class="article" href="/news/#n-{e(n["id"])}">
+        <span class="kicker">News · {e(n["date"])}</span>
+        <h3 style="font-size:22px">{e(n["body"][0][:160] + ("…" if len(n["body"][0]) > 160 else ""))}</h3>
+        <span class="more">Read the brief →</span>
+      </a>""" for n in NEWS[:6]) or '<p class="muted">News is on its way.</p>'
 
 short_cards = "\n".join(f'''      <a class="short" href="https://www.youtube.com/shorts/{s["id"]}" target="_blank" rel="noopener">
         <img src="shorts/{s["id"]}.jpg?v={ver("shorts/" + s["id"] + ".jpg")}" alt="{e(s["title"])}" loading="lazy" width="360" height="640">
@@ -301,7 +309,7 @@ footer .wrap{{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap
 <body>
 <nav><div class="wrap">
   <a class="brand" href="#top"><img src="favicon.svg" alt="">Fulcrum <b>Brief</b></a>
-  <div class="links"><a href="#briefings">Briefings</a><a href="#articles">Articles</a><a href="#shorts">Shorts</a><a href="#topics">Topics</a><a href="/standards/">Standards</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+  <div class="links"><a href="#briefings">Briefings</a><a href="/news/">News</a><a href="#articles">Articles</a><a href="#shorts">Shorts</a><a href="#topics">Topics</a><a href="/standards/">Standards</a><a href="#about">About</a><a href="#contact">Contact</a></div>
   <a class="btn" href="https://www.youtube.com/@FulcrumBrief?sub_confirmation=1" target="_blank" rel="noopener">Subscribe</a>
 </div></nav>
 
@@ -325,7 +333,7 @@ footer .wrap{{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap
   <div><b>{max(CNT["videos"], len(V))}</b><span>Full briefings</span></div>
   <div><b>{max(CNT["shorts"], len(S["shorts"]))}</b><span>Shorts</span></div>
   <div><b>{len(ARTS)}</b><span>Articles</span></div>
-  <div><b>Mon · Wed · Fri</b><span>New videos</span></div>
+  <div><b>{len(NEWS)}+</b><span>News briefs</span></div>
 </div>
 
 <main class="wrap">
@@ -333,6 +341,13 @@ footer .wrap{{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap
     <div class="sechead"><h2 class="sec">More <span>briefings</span></h2><a href="https://www.youtube.com/@FulcrumBrief/videos" target="_blank" rel="noopener">All videos →</a></div>
     <div class="grid">
 {video_cards}
+    </div>
+  </section>
+
+  <section id="news">
+    <div class="sechead"><h2 class="sec">Latest <span>news</span></h2><a href="/news/">All news →</a></div>
+    <div class="articles">
+{news_cards}
     </div>
   </section>
 
