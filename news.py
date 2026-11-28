@@ -19,6 +19,25 @@ ACTOR = "fulcrumbrief.bsky.social"
 SKIP = ("card photo", "photo:", "image:", "map:")
 
 
+def rich(text, facets):
+    """Escaped text with Bluesky link facets turned into <a> (facets use UTF-8 byte offsets)."""
+    b = text.encode("utf-8")
+    links = []
+    for f in facets or []:
+        for feat in f.get("features", []):
+            if feat.get("uri"):
+                links.append((f["index"]["byteStart"], f["index"]["byteEnd"], feat["uri"]))
+    out, pos = [], 0
+    for s, en, uri in sorted(links):
+        if s < pos:
+            continue
+        out.append(e(b[pos:s].decode("utf-8", "ignore")))
+        out.append(f'<a href="{e(uri)}" target="_blank" rel="noopener">{e(b[s:en].decode("utf-8", "ignore"))}</a>')
+        pos = en
+    out.append(e(b[pos:].decode("utf-8", "ignore")))
+    return "".join(out)
+
+
 def fetch(limit=80):
     cache = os.path.join(HERE, "newsroom-cache.json")
     imgdir = os.path.join(HERE, "news", "img")
@@ -33,7 +52,7 @@ def fetch(limit=80):
                 continue
             p, rec = f["post"], f["post"]["record"]
             if rec.get("reply"):
-                parts.setdefault(rec["reply"]["root"]["uri"], []).append((rec["createdAt"], rec.get("text", "")))
+                parts.setdefault(rec["reply"]["root"]["uri"], []).append((rec["createdAt"], rec.get("text", ""), rich(rec.get("text", ""), rec.get("facets"))))
                 continue
             emb = p.get("embed") or {}
             media = emb.get("media") or {}
@@ -46,12 +65,14 @@ def fetch(limit=80):
                     img = src["thumbnail"]
                     break
             rkey = p["uri"].rsplit("/", 1)[1]
-            roots[p["uri"]] = dict(id=rkey, text=rec.get("text", ""), created=rec["createdAt"], img=img,
+            roots[p["uri"]] = dict(id=rkey, text=rec.get("text", ""), html=rich(rec.get("text", ""), rec.get("facets")), created=rec["createdAt"], img=img,
                                    link=f"https://bsky.app/profile/{ACTOR}/post/{rkey}")
         out = []
         for uri, r in roots.items():
-            body = [r["text"]] + [t for _, t in sorted(parts.get(uri, []))]
-            body = [b.strip() for b in body if b.strip() and not b.strip().lower().startswith(SKIP)]
+            pairs = [(r["text"], r["html"])] + [(t, h) for _, t, h in sorted(parts.get(uri, []))]
+            pairs = [(t.strip(), h) for t, h in pairs if t.strip() and not t.strip().lower().startswith(SKIP)]
+            body = [t for t, _ in pairs]
+            htmls = [h for _, h in pairs]
             if not body:
                 continue
             local = ""
@@ -63,7 +84,7 @@ def fetch(limit=80):
                 if not os.path.exists(fp) or os.path.getsize(fp) < 2000:
                     local = ""
             dt = datetime.datetime.fromisoformat(r["created"].replace("Z", "+00:00"))
-            out.append(dict(id=r["id"], body=body, img=local, link=r["link"], iso=dt.isoformat(),
+            out.append(dict(id=r["id"], body=body, html=htmls, img=local, link=r["link"], iso=dt.isoformat(),
                             date=dt.strftime("%b %d, %Y")))
         out.sort(key=lambda x: x["iso"], reverse=True)
         out = out[:limit]
@@ -90,10 +111,11 @@ CSS = """<style>
 
 
 def item_html(n):
-    rest = "".join(f"<p>{e(b)}</p>" for b in n["body"][1:])
+    hs = n.get("html") or [e(b) for b in n["body"]]
+    rest = "".join(f"<p>{h}</p>" for h in hs[1:])
     img = f'<img src="/{n["img"]}" alt="" loading="lazy">' if n["img"] else ""
     return (f'<article class="item{"" if img else " noimg"}" id="n-{e(n["id"])}">{img}<div>'
-            f'<span class="kicker">News · {e(n["date"])}</span><p class="lead">{e(n["body"][0])}</p>{rest}'
+            f'<span class="kicker">News · {e(n["date"])}</span><p class="lead">{hs[0]}</p>{rest}'
             f'<a class="src" href="{e(n["link"])}" target="_blank" rel="noopener">Discuss on Bluesky →</a></div></article>')
 
 
